@@ -9,9 +9,9 @@
 import Foundation
 
 
-public protocol WTUniquePrimitiveType: CustomStringConvertible, Equatable, Hashable {
+public protocol WTUniquePrimitiveType: CustomStringConvertible, Equatable, Comparable, Hashable {
 
-    associatedtype PrimitiveType: CustomStringConvertible, Equatable, Hashable
+    associatedtype PrimitiveType: CustomStringConvertible, Equatable, Comparable, Hashable
 
     var value: PrimitiveType { get }
     init(_ value: PrimitiveType)
@@ -29,9 +29,18 @@ extension WTUniquePrimitiveType {
 // MARK: - Equatable
 
 extension WTUniquePrimitiveType {
-    public static func ==<T: WTUniquePrimitiveType>(lhs: Self, rhs: T) -> Bool
+    public static func == <T: WTUniquePrimitiveType>(lhs: Self, rhs: T) -> Bool
         where T.PrimitiveType == Self.PrimitiveType {
             return lhs.value == rhs.value
+    }
+}
+
+// MARK: - Comparable
+
+extension WTUniquePrimitiveType {
+    public static func < <T: WTUniquePrimitiveType>(lhs: Self, rhs: T) -> Bool
+        where T.PrimitiveType == Self.PrimitiveType {
+            return lhs.value < rhs.value
     }
 }
 
