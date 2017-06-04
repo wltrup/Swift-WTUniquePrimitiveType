@@ -8,8 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		05E48C3DEF399397E3F88830E7A536E9 /* WTUniquePrimitiveType-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5210219325C937E9109167391807EA2F /* WTUniquePrimitiveType-dummy.m */; };
-		137F4AB6F10FD67DA1FFDECCCF226BDE /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8132BEFA71DD6DF176F870B7871519 /* ReplaceMe.swift */; };
 		2ADFC405216F27B523F0BD5B33F0D53D /* Pods-WTUniquePrimitiveType_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 381324150623EE8AB8A1A921549DF127 /* Pods-WTUniquePrimitiveType_Tests-dummy.m */; };
+		3BAAE9E61EE4357400ABA610 /* UniqueFloatingPointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAAE9E01EE4357400ABA610 /* UniqueFloatingPointType.swift */; };
+		3BAAE9E71EE4357400ABA610 /* DictionarySupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAAE9E11EE4357400ABA610 /* DictionarySupport.swift */; };
+		3BAAE9E81EE4357400ABA610 /* UniqueBooleanType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAAE9E21EE4357400ABA610 /* UniqueBooleanType.swift */; };
+		3BAAE9E91EE4357400ABA610 /* UniqueStringType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAAE9E31EE4357400ABA610 /* UniqueStringType.swift */; };
+		3BAAE9EA1EE4357400ABA610 /* WTUniquePrimitiveType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAAE9E41EE4357400ABA610 /* WTUniquePrimitiveType.swift */; };
+		3BAAE9EC1EE437AB00ABA610 /* UniqueIntegerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAAE9EB1EE437AB00ABA610 /* UniqueIntegerType.swift */; };
+		3BAAE9F01EE43B1800ABA610 /* ArraySupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAAE9EF1EE43B1800ABA610 /* ArraySupport.swift */; };
+		3BAAE9F21EE43B3900ABA610 /* SetSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAAE9F11EE43B3900ABA610 /* SetSupport.swift */; };
 		9EBF590245B63CDA94A6AB914F3D5F01 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		A088C9280F32C83154D22B4C9EF7A91E /* WTUniquePrimitiveType-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7F98C4699179FB5C6716E769B0394D1B /* WTUniquePrimitiveType-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AA02A0DE7E420E443DD067C79F47355A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
@@ -31,21 +38,28 @@
 		156042F0479BD24CAFAFB49D80DDCE32 /* Pods-WTUniquePrimitiveType_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-WTUniquePrimitiveType_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		17EC4317FD634EC528090A270CEBE3E2 /* WTUniquePrimitiveType-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "WTUniquePrimitiveType-prefix.pch"; sourceTree = "<group>"; };
 		1CC59D69DF3FD9BB6A7E4AB5C525735E /* Pods-WTUniquePrimitiveType_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-WTUniquePrimitiveType_Tests-frameworks.sh"; sourceTree = "<group>"; };
-		2016C6EEA60ADE24FB4403736E5EA515 /* Pods_WTUniquePrimitiveType_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_WTUniquePrimitiveType_Tests.framework; path = "Pods-WTUniquePrimitiveType_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2016C6EEA60ADE24FB4403736E5EA515 /* Pods_WTUniquePrimitiveType_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WTUniquePrimitiveType_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		381324150623EE8AB8A1A921549DF127 /* Pods-WTUniquePrimitiveType_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-WTUniquePrimitiveType_Tests-dummy.m"; sourceTree = "<group>"; };
+		3BAAE9E01EE4357400ABA610 /* UniqueFloatingPointType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UniqueFloatingPointType.swift; sourceTree = "<group>"; };
+		3BAAE9E11EE4357400ABA610 /* DictionarySupport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionarySupport.swift; sourceTree = "<group>"; };
+		3BAAE9E21EE4357400ABA610 /* UniqueBooleanType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UniqueBooleanType.swift; sourceTree = "<group>"; };
+		3BAAE9E31EE4357400ABA610 /* UniqueStringType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UniqueStringType.swift; sourceTree = "<group>"; };
+		3BAAE9E41EE4357400ABA610 /* WTUniquePrimitiveType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WTUniquePrimitiveType.swift; sourceTree = "<group>"; };
+		3BAAE9EB1EE437AB00ABA610 /* UniqueIntegerType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UniqueIntegerType.swift; sourceTree = "<group>"; };
+		3BAAE9EF1EE43B1800ABA610 /* ArraySupport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArraySupport.swift; sourceTree = "<group>"; };
+		3BAAE9F11EE43B3900ABA610 /* SetSupport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetSupport.swift; sourceTree = "<group>"; };
 		3EA540E29769D19A53AC34D0E4FB97AC /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3F641AD11F7614C25635C69606298BF6 /* WTUniquePrimitiveType.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = WTUniquePrimitiveType.modulemap; sourceTree = "<group>"; };
+		3F641AD11F7614C25635C69606298BF6 /* WTUniquePrimitiveType.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = WTUniquePrimitiveType.modulemap; sourceTree = "<group>"; };
 		50A82EFB95FC318D447106BA71A8875A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5210219325C937E9109167391807EA2F /* WTUniquePrimitiveType-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "WTUniquePrimitiveType-dummy.m"; sourceTree = "<group>"; };
 		54AE1500C65E69FEA1301194C96D0879 /* Pods-WTUniquePrimitiveType_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-WTUniquePrimitiveType_Tests-umbrella.h"; sourceTree = "<group>"; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		73362553306C893C0348064B429F6A02 /* WTUniquePrimitiveType.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = WTUniquePrimitiveType.xcconfig; sourceTree = "<group>"; };
 		7F98C4699179FB5C6716E769B0394D1B /* WTUniquePrimitiveType-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "WTUniquePrimitiveType-umbrella.h"; sourceTree = "<group>"; };
-		8CC6208B8C8E427EA1652B9CF78914FD /* WTUniquePrimitiveType.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = WTUniquePrimitiveType.framework; path = WTUniquePrimitiveType.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		8CC6208B8C8E427EA1652B9CF78914FD /* WTUniquePrimitiveType.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WTUniquePrimitiveType.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A11E3235BCE1B736765176425A7EE417 /* Pods-WTUniquePrimitiveType_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WTUniquePrimitiveType_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		A95D2214F1805081933A6FDF658DD35D /* Pods-WTUniquePrimitiveType_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-WTUniquePrimitiveType_Tests.modulemap"; sourceTree = "<group>"; };
-		AE8132BEFA71DD6DF176F870B7871519 /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ReplaceMe.swift; sourceTree = "<group>"; };
+		A95D2214F1805081933A6FDF658DD35D /* Pods-WTUniquePrimitiveType_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-WTUniquePrimitiveType_Tests.modulemap"; sourceTree = "<group>"; };
 		DA5A03C9E1AC1BC7FE55E093D1F4E847 /* Pods-WTUniquePrimitiveType_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WTUniquePrimitiveType_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		EAB7BE2123629D83B587D18003DE730C /* Pods-WTUniquePrimitiveType_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WTUniquePrimitiveType_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -129,9 +143,15 @@
 		8240E07E3C5282F06D165E075232D1B8 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				AE8132BEFA71DD6DF176F870B7871519 /* ReplaceMe.swift */,
+				3BAAE9E41EE4357400ABA610 /* WTUniquePrimitiveType.swift */,
+				3BAAE9E21EE4357400ABA610 /* UniqueBooleanType.swift */,
+				3BAAE9EB1EE437AB00ABA610 /* UniqueIntegerType.swift */,
+				3BAAE9E01EE4357400ABA610 /* UniqueFloatingPointType.swift */,
+				3BAAE9E31EE4357400ABA610 /* UniqueStringType.swift */,
+				3BAAE9EF1EE43B1800ABA610 /* ArraySupport.swift */,
+				3BAAE9F11EE43B3900ABA610 /* SetSupport.swift */,
+				3BAAE9E11EE4357400ABA610 /* DictionarySupport.swift */,
 			);
-			name = Classes;
 			path = Classes;
 			sourceTree = "<group>";
 		};
@@ -164,7 +184,6 @@
 			children = (
 				8240E07E3C5282F06D165E075232D1B8 /* Classes */,
 			);
-			name = WTUniquePrimitiveType;
 			path = WTUniquePrimitiveType;
 			sourceTree = "<group>";
 		};
@@ -279,8 +298,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				137F4AB6F10FD67DA1FFDECCCF226BDE /* ReplaceMe.swift in Sources */,
+				3BAAE9EC1EE437AB00ABA610 /* UniqueIntegerType.swift in Sources */,
+				3BAAE9E61EE4357400ABA610 /* UniqueFloatingPointType.swift in Sources */,
+				3BAAE9F01EE43B1800ABA610 /* ArraySupport.swift in Sources */,
+				3BAAE9EA1EE4357400ABA610 /* WTUniquePrimitiveType.swift in Sources */,
+				3BAAE9E71EE4357400ABA610 /* DictionarySupport.swift in Sources */,
+				3BAAE9E81EE4357400ABA610 /* UniqueBooleanType.swift in Sources */,
+				3BAAE9E91EE4357400ABA610 /* UniqueStringType.swift in Sources */,
 				05E48C3DEF399397E3F88830E7A536E9 /* WTUniquePrimitiveType-dummy.m in Sources */,
+				3BAAE9F21EE43B3900ABA610 /* SetSupport.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
