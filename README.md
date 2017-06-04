@@ -238,11 +238,11 @@ This ease of going back-and-forth between the boxed and unboxed variants of coll
 var userIdToUserNameMap: [UserId, UserName] = [:]
 ```
 
-Wait... don't you have to worry about making the dictionary key type conform to `Hashable`? No, you don't, because primitive types are already hashable and the underlying protocol that makes this library work uses that fact to implement `Hashable` on your behalf. As a result, all your custom `WTUniquePrimitiveType` creations aready conform to `Hashable`. They're also `Equatable` and `Comparable` too!
+Wait... don't you have to worry about making the dictionary key type conform to `Hashable`? No, you don't, because primitive types are already hashable and the underlying protocol that makes this library work uses that fact to implement `Hashable` on your behalf. As a result, all your custom `WTUniquePrimitiveType` creations aready conform to `Hashable`. They're `Equatable` and `Comparable` too!
 
 ### Arithmetic operations
 
-That is something I haven't done yet but they will be added to `version 1.1` of this library, so stay tuned. For now, you'll have to resort to access the internal values by using the getter property `value`, as in:
+That is something I haven't done yet but plan to add to `version 1.1` of this library, so stay tuned. For now, you'll have to resort to access the internal values by using the getter property `value`, as in:
 
 ```swift
 let total = user.numberOfPets.value + 3
