@@ -10,6 +10,21 @@ class UniqueStringTypeTests: XCTestCase {
         XCTAssertEqual(userName.value, value)
     }
 
+    func testExpressibleByStringLiteral() {
+        let userName = UserName(stringLiteral: "John Doe")
+        XCTAssertEqual(userName.value, "John Doe")
+    }
+
+    func testExpressibleByExtendedGraphemeClusterLiteral() {
+        let userName = UserName(extendedGraphemeClusterLiteral: "John Doe")
+        XCTAssertEqual(userName.value, "John Doe")
+    }
+
+    func testExpressibleByUnicodeScalarLiteral() {
+        let userName = UserName(unicodeScalarLiteral: "John Doe")
+        XCTAssertEqual(userName.value, "John Doe")
+    }
+
     func testDescription() {
         let value: String = "John Doe"
         let userName = UserName(value)
@@ -32,6 +47,22 @@ class UniqueStringTypeTests: XCTestCase {
         XCTAssertFalse(userName1 == userName2)
     }
 
+    func testComparable() {
+        let value1: String = "Jane Doe"
+        let userName1 = UserName(value1)
+        let value2: String = "John Doe"
+        let userName2 = UserName(value2)
+        XCTAssertTrue(userName1 < userName2)
+    }
+
+    func testNotComparable() {
+        let value1: String = "John Doe"
+        let userName1 = UserName(value1)
+        let value2: String = "John Doe"
+        let userName2 = UserName(value2)
+        XCTAssertFalse(userName1 < userName2)
+    }
+    
     func testHashable() {
         let value: String = "John Doe"
         let userName = UserName(value)

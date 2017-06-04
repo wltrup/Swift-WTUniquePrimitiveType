@@ -32,6 +32,22 @@ class UniqueBooleanTypeTests: XCTestCase {
         XCTAssertFalse(isConnected1 == isConnected2)
     }
 
+    func testComparable() {
+        let value1: Bool = false
+        let isConnected1 = UserConnected(value1)
+        let value2: Bool = true
+        let isConnected2 = UserConnected(value2)
+        XCTAssertTrue(isConnected1 < isConnected2)
+    }
+
+    func testNotComparable() {
+        let value1: Bool = true
+        let isConnected1 = UserConnected(value1)
+        let value2: Bool = true
+        let isConnected2 = UserConnected(value2)
+        XCTAssertFalse(isConnected1 < isConnected2)
+    }
+
     func testHashable() {
         let value: Bool = true
         let isConnected = UserConnected(value)
