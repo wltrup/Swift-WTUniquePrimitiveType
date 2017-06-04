@@ -130,9 +130,9 @@ To use them, first declare types like the following somewhere in your project. Y
     }
 ```
 
-You could also create types that are not generic. For instance, if in your application the only type that supports passwords is the `User` type, then you could declare a concrete type for passwords:
-``Swift
-    struct Password: UniqueIntegerType {
+You could also create types that are not generic and types that aren't structs. For instance, if in your application the only type that supports passwords is the `User` type and you want to make the password a class rather than a struct, then you could declare something like this:
+```Swift
+    class Password: UniqueIntegerType {
         public typealias PrimitiveType = Int
         public let value: Int
         public init(_ value: Int) {
