@@ -11,4 +11,10 @@ import Foundation
 
 public protocol UniqueBooleanType: WTUniquePrimitiveType {}
 
+extension Bool: Comparable {
 
+    public static func <(lhs: Bool, rhs: Bool) -> Bool {
+        return !lhs && rhs
+    }
+
+}
