@@ -16,10 +16,10 @@
 		607FACE51AFB9204008FA782 /* WTUniquePrimitiveType_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WTUniquePrimitiveType_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
-		7F1C29B23516932109640A20 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		7F1C29B23516932109640A20 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		A1AB9C9C980FC3BBADDD322D /* Pods_WTUniquePrimitiveType_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WTUniquePrimitiveType_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BFB7D868AAB53572E40967C8 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		D960775A28072D9249261ACD /* WTUniquePrimitiveType.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = WTUniquePrimitiveType.podspec; path = ../WTUniquePrimitiveType.podspec; sourceTree = "<group>"; };
+		BFB7D868AAB53572E40967C8 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		D960775A28072D9249261ACD /* WTUniquePrimitiveType.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = WTUniquePrimitiveType.podspec; path = ../WTUniquePrimitiveType.podspec; sourceTree = "<group>"; };
 		DBCC9FF61541E68B2B0357EC /* Pods-WTUniquePrimitiveType_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WTUniquePrimitiveType_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WTUniquePrimitiveType_Tests/Pods-WTUniquePrimitiveType_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -131,12 +131,9 @@
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = CocoaPods;
 				TargetAttributes = {
-					607FACCF1AFB9204008FA782 = {
-						CreatedOnToolsVersion = 6.3.1;
-						LastSwiftMigration = 0820;
-					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = 9MP5BB6ZRE;
 						LastSwiftMigration = 0820;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
@@ -321,6 +318,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = DBCC9FF61541E68B2B0357EC /* Pods-WTUniquePrimitiveType_Tests.debug.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 9MP5BB6ZRE;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -341,6 +339,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3321696612E810F97E00E122 /* Pods-WTUniquePrimitiveType_Tests.release.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 9MP5BB6ZRE;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",

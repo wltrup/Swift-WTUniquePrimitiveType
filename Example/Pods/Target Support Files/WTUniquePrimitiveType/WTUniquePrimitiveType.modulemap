@@ -1,0 +1,6 @@
+framework module WTUniquePrimitiveType {
+  umbrella header "WTUniquePrimitiveType-umbrella.h"
+
+  export *
+  module * { export * }
+}

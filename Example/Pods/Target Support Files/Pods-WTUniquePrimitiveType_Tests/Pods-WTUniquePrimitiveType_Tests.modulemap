@@ -1,0 +1,6 @@
+framework module Pods_WTUniquePrimitiveType_Tests {
+  umbrella header "Pods-WTUniquePrimitiveType_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

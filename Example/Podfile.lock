@@ -1,0 +1,16 @@
+PODS:
+  - WTUniquePrimitiveType (0.1.0)
+
+DEPENDENCIES:
+  - WTUniquePrimitiveType (from `../`)
+
+EXTERNAL SOURCES:
+  WTUniquePrimitiveType:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  WTUniquePrimitiveType: 50eb7df485e7cffc092a6994b824dfe66871c25e
+
+PODFILE CHECKSUM: 5b59eade075b12424213cdec7d6809dbc5380b45
+
+COCOAPODS: 1.2.1
