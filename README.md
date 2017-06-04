@@ -2,8 +2,10 @@
 
 [![CI Status](http://img.shields.io/travis/wltrup/Swift-WTUniquePrimitiveType.svg?style=flat)](https://travis-ci.org/wltrup/Swift-WTUniquePrimitiveType)
 [![Version](https://img.shields.io/cocoapods/v/WTUniquePrimitiveType.svg?style=flat)](http://cocoapods.org/pods/WTUniquePrimitiveType)
-[![License](https://img.shields.io/cocoapods/l/WTUniquePrimitiveType.svg?style=flat)](http://cocoapods.org/pods/WTUniquePrimitiveType)
 [![Platform](https://img.shields.io/cocoapods/p/WTUniquePrimitiveType.svg?style=flat)](http://cocoapods.org/pods/WTUniquePrimitiveType)
+[![Swift](https://img.shields.io/badge/Swift-3.1-orange.svg)](https://swift.org)
+[![Xcode](https://img.shields.io/badge/Xcode-8.3-blue.svg)](https://developer.apple.com/xcode)
+[![License](https://img.shields.io/cocoapods/l/WTUniquePrimitiveType.svg?style=flat)](http://cocoapods.org/pods/WTUniquePrimitiveType)
 
 ## Motivation
 
@@ -232,7 +234,7 @@ will create an array of `UserId` instances from an array of the primitive type (
 ```swift
     let array2: [Int] = userIds.unboxed()
 ```
-will give you back an array of the primitive values tucked inside. You are required to help the compiler to infer the correct types by declaring the type of the variable you expect back, as was done above for `array1` and `array2`.
+will give you back an array of the primitive values tucked inside. You are required to help the compiler to infer the correct types by declaring the type of the variable you expect back, as was done above for `userIds` and `array2`.
 
 This ease of going back-and-forth between the boxed and unboxed variants of collections of your custom types applies to instances of `Array`, `Set`, and `Dictionary`. For example, you could have a dictionary mapping user ids to user names, like this:
 
