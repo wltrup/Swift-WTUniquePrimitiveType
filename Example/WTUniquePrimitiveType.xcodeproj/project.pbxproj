@@ -32,6 +32,7 @@
 		3BAAE9FA1EE43FD400ABA610 /* WTUniquePrimitiveTypeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WTUniquePrimitiveTypeTests.swift; sourceTree = "<group>"; };
 		3BAAEA051EE447ED00ABA610 /* CustomTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTypes.swift; sourceTree = "<group>"; };
 		3BAAEA071EE4488100ABA610 /* AppTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppTypes.swift; sourceTree = "<group>"; };
+		3BED29AF1EE46CFA001A7BEB /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = CHANGELOG.md; path = ../CHANGELOG.md; sourceTree = "<group>"; };
 		607FACE51AFB9204008FA782 /* WTUniquePrimitiveType_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WTUniquePrimitiveType_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7F1C29B23516932109640A20 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
@@ -112,6 +113,7 @@
 			children = (
 				D960775A28072D9249261ACD /* WTUniquePrimitiveType.podspec */,
 				BFB7D868AAB53572E40967C8 /* README.md */,
+				3BED29AF1EE46CFA001A7BEB /* CHANGELOG.md */,
 				7F1C29B23516932109640A20 /* LICENSE */,
 			);
 			name = "Podspec Metadata";
