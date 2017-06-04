@@ -37,5 +37,5 @@ class UniqueBooleanTypeTests: XCTestCase {
         let isConnected = UserConnected(value)
         XCTAssertEqual(isConnected.hashValue, value.hashValue)
     }
-
+    
 }

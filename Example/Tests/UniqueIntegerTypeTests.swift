@@ -9,7 +9,7 @@ class UniqueIntegerTypeTests: XCTestCase {
         let userId = UserId(value)
         XCTAssertEqual(userId.value, value)
     }
-    
+
     func testDescription() {
         let value: Int = 100
         let userId = UserId(value)
@@ -37,5 +37,5 @@ class UniqueIntegerTypeTests: XCTestCase {
         let userId = UserId(value)
         XCTAssertEqual(userId.hashValue, value.hashValue)
     }
-
+    
 }

@@ -37,5 +37,5 @@ class UniqueFloatingPointTypeTests: XCTestCase {
         let userCoreTemp = UserCoreTemperature(value)
         XCTAssertEqual(userCoreTemp.hashValue, value.hashValue)
     }
-
+    
 }

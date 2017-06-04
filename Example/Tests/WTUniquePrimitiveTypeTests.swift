@@ -7,5 +7,5 @@ class WTUniquePrimitiveTypeTests: XCTestCase {
 
     // Nothing to test here. See tests for
     // concrete implementations.
-
+    
 }
