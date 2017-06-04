@@ -8,35 +8,24 @@
 
 Pod::Spec.new do |s|
   s.name             = 'WTUniquePrimitiveType'
-  s.version          = '0.1.0'
-  s.summary          = 'A short description of WTUniquePrimitiveType.'
-
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!
-
+  s.version          = '1.0.0'
+  s.summary          = 'Lets you create distinct types based on identical primitive types.'
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+    Say that your code has a user identifier that's an Int. The count of users
+    is also an Int but, clearly, these are semantically different Ints. What if
+    you accidentally set the value of userId to the count of users? The compiler
+    wouldn't complain because both values are Int instances. This library lets
+    you create distinct types for situations like this, where you need
+    semantically different types based on the same primitive type. It works with
+    all primitive types, not just Ints, and makes the use of these distinct
+    types as easy and transparent as possible.
                        DESC
 
   s.homepage         = 'https://github.com/wltrup/WTUniquePrimitiveType'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'wltrup' => 'wagner@novoda.com' }
+  s.author           = { 'wltrup' => 'wagner@trupwl.com' }
   s.source           = { :git => 'https://github.com/wltrup/WTUniquePrimitiveType.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '8.0'
-
   s.source_files = 'WTUniquePrimitiveType/Classes/**/*'
-  
-  # s.resource_bundles = {
-  #   'WTUniquePrimitiveType' => ['WTUniquePrimitiveType/Assets/*.png']
-  # }
-
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
 end
