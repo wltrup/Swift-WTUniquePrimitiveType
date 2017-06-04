@@ -1,0 +1,6 @@
+use_frameworks!
+target 'WTUniquePrimitiveType_Tests' do
+  pod 'WTUniquePrimitiveType', :path => '../'
+  
+  
+end
