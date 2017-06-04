@@ -136,10 +136,10 @@ To use them, first declare types like the following somewhere in your project. Y
 
 You could also create types that are not generic and types that aren't structs. For instance, if in your application the only type that supports passwords is the `User` type and you want to make the password a class rather than a struct, then you could declare something like this:
 ```Swift
-    class Password: UniqueIntegerType {
-        public typealias PrimitiveType = Int
-        public let value: Int
-        public init(_ value: Int) {
+    class Password: UniqueStringType {
+        public typealias PrimitiveType = String
+        public let value: String
+        public init(_ value: String) {
             self.value = value
         }
     }
@@ -177,6 +177,8 @@ Regardless, the next thing to do is to create your actual data types, like so:
         var numberOfFalseAlarms: CountOfFalseAlarms
     }
 ```
+
+Note how nicely the various types read. For instance, `Name<User>` and `Id<User>` couldn't be any clearer or more self-documenting, in addition to being type-safe.
 
 Now, whenever you try to set values for one property using values from another, or pass values of the wrong type to a function, the compiler will warn you that your types are mismatched. For example, this code block won't compile:
 
