@@ -11,13 +11,7 @@ import Foundation
 
 // MARK: - Hashable
 
-extension Set where Element: Hashable {
-
-    public var hashValue: Int {
-        return self.map { $0.hashValue }.reduce(1.hashValue) { return $0 ^ $1 }
-    }
-
-}
+// Set already supports Hashing for any type that can be put into a Set.
 
 // MARK: - BOXING
 

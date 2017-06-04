@@ -11,7 +11,7 @@ import Foundation
 
 // MARK: - Hashable
 
-extension Array where Element: Hashable {
+extension Array where Element: WTUniquePrimitiveType {
 
     public var hashValue: Int {
         return self.map { $0.hashValue }.reduce(1.hashValue) { return $0 ^ $1 }
