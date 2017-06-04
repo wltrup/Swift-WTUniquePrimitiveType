@@ -77,6 +77,8 @@ These mistakes are far too easy to make and happen far too frequently. Wouldn't 
 
 Well, that's what this library lets you do.
 
+**Addendum**: You might enjoy reading [this blog post](https://www.novoda.com/blog/avoiding-primitive-obsession-in-swift/) by a colleague of mine. It goes into some more detail on why you should avoid what my friend calls *primitive obsession.* It's a very good read.
+
 ## How to use
 
 There are four protocols that you need to know about:
