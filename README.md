@@ -88,7 +88,7 @@ There are four protocols that you need to know about:
 
 To use them, first declare types like the following somewhere in your project. You'll need them but you won't be using them directly all that often:
 
-``Swift
+```Swift
     struct Id<T>: UniqueIntegerType {
         public typealias PrimitiveType = Int
         public let value: Int
