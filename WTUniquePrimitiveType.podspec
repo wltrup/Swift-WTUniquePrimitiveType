@@ -17,13 +17,13 @@ Pod::Spec.new do |s|
     wouldn't complain because both values are Int instances. This library lets
     you create distinct types for situations like this, where you need
     semantically different types based on the same primitive type. It works with
-    all primitive types, not just Ints, and makes the use of these distinct
-    types as easy and transparent as possible.
+    all primitive types, not just Ints, and makes using these distinct types as
+    easy and transparent as possible.
                        DESC
 
   s.homepage         = 'https://github.com/wltrup/WTUniquePrimitiveType'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'wltrup' => 'wagner@trupwl.com' }
+  s.author           = { 'wltrup' => 'trupwl@gmail.com' }
   s.source           = { :git => 'https://github.com/wltrup/WTUniquePrimitiveType.git', :tag => s.version.to_s }
 
   s.ios.deployment_target = '8.0'

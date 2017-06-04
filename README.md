@@ -11,6 +11,8 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Requirements
 
+This library was built with and for Swift 3.1 and Xcode 8.3.2.
+
 ## Installation
 
 WTUniquePrimitiveType is available through [CocoaPods](http://cocoapods.org). To install
@@ -22,7 +24,7 @@ pod "WTUniquePrimitiveType"
 
 ## Author
 
-wltrup, wagner@novoda.com
+wltrup, trupwl@gmail.com
 
 ## License
 
