@@ -9,7 +9,7 @@
 import Foundation
 
 
-public protocol UniqueBooleanType: WTUniquePrimitiveType {}
+public protocol UniqueBooleanType: WTUniquePrimitiveType, ExpressibleByBooleanLiteral {}
 
 extension Bool: Comparable {
 
@@ -17,4 +17,12 @@ extension Bool: Comparable {
         return !lhs && rhs
     }
 
+}
+
+// MARK: - ExpressibleByBooleanLiteral
+
+extension UniqueBooleanType where Self.PrimitiveType: ExpressibleByBooleanLiteral {
+    public init(booleanLiteral value: Self.PrimitiveType) {
+        self.init(value)
+    }
 }

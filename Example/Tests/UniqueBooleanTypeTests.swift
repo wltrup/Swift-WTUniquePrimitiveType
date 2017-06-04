@@ -10,6 +10,11 @@ class UniqueBooleanTypeTests: XCTestCase {
         XCTAssertEqual(isConnected.value, value)
     }
 
+    func testExpressibleByBooleanLiteral() {
+        let isConnected = UserConnected(booleanLiteral: true)
+        XCTAssertEqual(isConnected.value, true)
+    }
+
     func testDescription() {
         let value: Bool = true
         let isConnected = UserConnected(value)
