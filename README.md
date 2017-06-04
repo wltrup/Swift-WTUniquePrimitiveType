@@ -192,7 +192,7 @@ Now, whenever you try to set values for one property using values from another, 
 
 because you're trying to set the user's core temperature to the reactor's core temperature. Here's a screen shot of the warning I get from Xcode in this case:
 
-XXXX
+![sample warning](https://github.com/wltrup/Swift-WTUniquePrimitiveType/blob/master/sample_warning.png)
 
 But, wait! Have you noticed that I didn't have to use the long form for calling the initialisers of the new types we created, as in the code below?
 
