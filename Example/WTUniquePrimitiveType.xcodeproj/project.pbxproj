@@ -7,15 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
+		3BAAE9FB1EE43FD400ABA610 /* ArraySupportTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAAE9F31EE43FD400ABA610 /* ArraySupportTests.swift */; };
+		3BAAE9FC1EE43FD400ABA610 /* DictionarySupportTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAAE9F41EE43FD400ABA610 /* DictionarySupportTests.swift */; };
+		3BAAE9FD1EE43FD400ABA610 /* SetSupportTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAAE9F51EE43FD400ABA610 /* SetSupportTests.swift */; };
+		3BAAE9FE1EE43FD400ABA610 /* UniqueBooleanTypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAAE9F61EE43FD400ABA610 /* UniqueBooleanTypeTests.swift */; };
+		3BAAE9FF1EE43FD400ABA610 /* UniqueFloatingPointTypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAAE9F71EE43FD400ABA610 /* UniqueFloatingPointTypeTests.swift */; };
+		3BAAEA001EE43FD400ABA610 /* UniqueIntegerTypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAAE9F81EE43FD400ABA610 /* UniqueIntegerTypeTests.swift */; };
+		3BAAEA011EE43FD400ABA610 /* UniqueStringTypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAAE9F91EE43FD400ABA610 /* UniqueStringTypeTests.swift */; };
+		3BAAEA021EE43FD400ABA610 /* WTUniquePrimitiveTypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAAE9FA1EE43FD400ABA610 /* WTUniquePrimitiveTypeTests.swift */; };
+		3BAAEA061EE447ED00ABA610 /* CustomTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAAEA051EE447ED00ABA610 /* CustomTypes.swift */; };
+		3BAAEA081EE4488100ABA610 /* AppTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAAEA071EE4488100ABA610 /* AppTypes.swift */; };
 		E00B52F678542862292742DB /* Pods_WTUniquePrimitiveType_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1AB9C9C980FC3BBADDD322D /* Pods_WTUniquePrimitiveType_Tests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3321696612E810F97E00E122 /* Pods-WTUniquePrimitiveType_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WTUniquePrimitiveType_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WTUniquePrimitiveType_Tests/Pods-WTUniquePrimitiveType_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		3BAAE9F31EE43FD400ABA610 /* ArraySupportTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArraySupportTests.swift; sourceTree = "<group>"; };
+		3BAAE9F41EE43FD400ABA610 /* DictionarySupportTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionarySupportTests.swift; sourceTree = "<group>"; };
+		3BAAE9F51EE43FD400ABA610 /* SetSupportTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetSupportTests.swift; sourceTree = "<group>"; };
+		3BAAE9F61EE43FD400ABA610 /* UniqueBooleanTypeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UniqueBooleanTypeTests.swift; sourceTree = "<group>"; };
+		3BAAE9F71EE43FD400ABA610 /* UniqueFloatingPointTypeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UniqueFloatingPointTypeTests.swift; sourceTree = "<group>"; };
+		3BAAE9F81EE43FD400ABA610 /* UniqueIntegerTypeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UniqueIntegerTypeTests.swift; sourceTree = "<group>"; };
+		3BAAE9F91EE43FD400ABA610 /* UniqueStringTypeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UniqueStringTypeTests.swift; sourceTree = "<group>"; };
+		3BAAE9FA1EE43FD400ABA610 /* WTUniquePrimitiveTypeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WTUniquePrimitiveTypeTests.swift; sourceTree = "<group>"; };
+		3BAAEA051EE447ED00ABA610 /* CustomTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTypes.swift; sourceTree = "<group>"; };
+		3BAAEA071EE4488100ABA610 /* AppTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppTypes.swift; sourceTree = "<group>"; };
 		607FACE51AFB9204008FA782 /* WTUniquePrimitiveType_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WTUniquePrimitiveType_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		7F1C29B23516932109640A20 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		A1AB9C9C980FC3BBADDD322D /* Pods_WTUniquePrimitiveType_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WTUniquePrimitiveType_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFB7D868AAB53572E40967C8 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
@@ -66,7 +84,16 @@
 		607FACE81AFB9204008FA782 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				607FACEB1AFB9204008FA782 /* Tests.swift */,
+				3BAAEA071EE4488100ABA610 /* AppTypes.swift */,
+				3BAAEA051EE447ED00ABA610 /* CustomTypes.swift */,
+				3BAAE9FA1EE43FD400ABA610 /* WTUniquePrimitiveTypeTests.swift */,
+				3BAAE9F61EE43FD400ABA610 /* UniqueBooleanTypeTests.swift */,
+				3BAAE9F81EE43FD400ABA610 /* UniqueIntegerTypeTests.swift */,
+				3BAAE9F71EE43FD400ABA610 /* UniqueFloatingPointTypeTests.swift */,
+				3BAAE9F91EE43FD400ABA610 /* UniqueStringTypeTests.swift */,
+				3BAAE9F31EE43FD400ABA610 /* ArraySupportTests.swift */,
+				3BAAE9F51EE43FD400ABA610 /* SetSupportTests.swift */,
+				3BAAE9F41EE43FD400ABA610 /* DictionarySupportTests.swift */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
 			);
 			path = Tests;
@@ -220,7 +247,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				607FACEC1AFB9204008FA782 /* Tests.swift in Sources */,
+				3BAAEA061EE447ED00ABA610 /* CustomTypes.swift in Sources */,
+				3BAAE9FD1EE43FD400ABA610 /* SetSupportTests.swift in Sources */,
+				3BAAEA011EE43FD400ABA610 /* UniqueStringTypeTests.swift in Sources */,
+				3BAAEA081EE4488100ABA610 /* AppTypes.swift in Sources */,
+				3BAAEA021EE43FD400ABA610 /* WTUniquePrimitiveTypeTests.swift in Sources */,
+				3BAAE9FE1EE43FD400ABA610 /* UniqueBooleanTypeTests.swift in Sources */,
+				3BAAEA001EE43FD400ABA610 /* UniqueIntegerTypeTests.swift in Sources */,
+				3BAAE9FF1EE43FD400ABA610 /* UniqueFloatingPointTypeTests.swift in Sources */,
+				3BAAE9FB1EE43FD400ABA610 /* ArraySupportTests.swift in Sources */,
+				3BAAE9FC1EE43FD400ABA610 /* DictionarySupportTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
