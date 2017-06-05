@@ -1,4 +1,16 @@
-import UIKit
+//
+//  UniqueFloatingPointTypeTests.swift
+//  WTUniquePrimitiveTypes
+//
+//  Created by Wagner Truppel on 31/05/2017.
+//  Copyright © 2017 wtruppel. All rights reserved.
+//
+
+// swiftlint:disable vertical_whitespace
+// swiftlint:disable trailing_newline
+// swiftlint:disable file_length
+// swiftlint:disable type_body_length
+
 import XCTest
 import WTUniquePrimitiveType
 
@@ -57,11 +69,11 @@ class UniqueFloatingPointTypeTests: XCTestCase {
         let coreTemp2 = UserCoreTemperature(value2)
         XCTAssertFalse(coreTemp1 < coreTemp2)
     }
-    
+
     func testHashable() {
         let value: Double = 100
         let userCoreTemp = UserCoreTemperature(value)
         XCTAssertEqual(userCoreTemp.hashValue, value.hashValue)
     }
-    
+
 }

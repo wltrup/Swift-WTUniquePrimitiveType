@@ -6,6 +6,13 @@
 //  Copyright © 2017 wtruppel. All rights reserved.
 //
 
+// swiftlint:disable vertical_whitespace
+// swiftlint:disable trailing_newline
+// swiftlint:disable file_length
+// swiftlint:disable type_body_length
+
+// swiftlint:disable type_name
+
 import Foundation
 import WTUniquePrimitiveType
 

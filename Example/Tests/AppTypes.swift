@@ -6,9 +6,15 @@
 //  Copyright © 2017 wtruppel. All rights reserved.
 //
 
+// swiftlint:disable vertical_whitespace
+// swiftlint:disable trailing_newline
+// swiftlint:disable file_length
+// swiftlint:disable type_body_length
+
+// swiftlint:disable variable_name
+
 import Foundation
 import WTUniquePrimitiveType
-
 
 
 typealias UserId = Id<User>
@@ -22,7 +28,6 @@ struct User {
     let isConnected: UserConnected
     let coreTemperature: UserCoreTemperature
 }
-
 
 
 typealias ReactorId = Id<NuclearReactor>

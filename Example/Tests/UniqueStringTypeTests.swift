@@ -1,4 +1,16 @@
-import UIKit
+//
+//  UniqueStringTypeTests.swift
+//  WTUniquePrimitiveTypes
+//
+//  Created by Wagner Truppel on 31/05/2017.
+//  Copyright © 2017 wtruppel. All rights reserved.
+//
+
+// swiftlint:disable vertical_whitespace
+// swiftlint:disable trailing_newline
+// swiftlint:disable file_length
+// swiftlint:disable type_body_length
+
 import XCTest
 import WTUniquePrimitiveType
 
@@ -62,11 +74,11 @@ class UniqueStringTypeTests: XCTestCase {
         let userName2 = UserName(value2)
         XCTAssertFalse(userName1 < userName2)
     }
-    
+
     func testHashable() {
         let value: String = "John Doe"
         let userName = UserName(value)
         XCTAssertEqual(userName.hashValue, value.hashValue)
     }
-    
+
 }
