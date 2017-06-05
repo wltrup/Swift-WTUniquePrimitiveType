@@ -314,6 +314,12 @@ it, simply add the following line to your Podfile:
 pod "WTUniquePrimitiveType"
 ```
 
+If that doesn't work (occasionally it doesn't), try this instead:
+
+```ruby
+pod 'WTUniquePrimitiveType', :git => 'https://github.com/wltrup/Swift-WTUniquePrimitiveType.git'
+```
+
 ## Author
 
 wltrup, trupwl@gmail.com
