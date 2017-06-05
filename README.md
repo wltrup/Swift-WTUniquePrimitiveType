@@ -7,6 +7,12 @@
 [![Xcode](https://img.shields.io/badge/Xcode-8.3-blue.svg)](https://developer.apple.com/xcode)
 [![License](https://img.shields.io/cocoapods/l/WTUniquePrimitiveType.svg?style=flat)](http://cocoapods.org/pods/WTUniquePrimitiveType)
 
+## New in 1.0.1
+
+`UniqueBooleanType` now supports all the standard boolean operators (`!`, `&&`, and `||`).
+
+Stay tuned for upcoming arithmetic operators being added to `UniqueIntegerType` and `UniqueFloatingPointType`. There are a lot of those, so it will take a while but support for them **is** coming.
+
 ## Motivation
 
 I'm sure it has happened to you that you have in your code properties of the same primitive type but with vastly different semantic meanings. For example, suppose you have the following value types (admittedly, a bizarre example):
