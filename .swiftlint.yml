@@ -3,7 +3,6 @@ excluded: # paths to ignore during linting. Takes precedence over `included`.
 
 included: # paths to include during linting. `--path` is ignored if present.
  - Example/Tests
- - Example/WTUniquePrimitiveType
  - WTUniquePrimitiveType/Classes
 
 disabled_rules:
