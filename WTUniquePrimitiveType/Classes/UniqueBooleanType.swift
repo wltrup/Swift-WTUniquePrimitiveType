@@ -30,4 +30,50 @@ extension UniqueBooleanType where Self.PrimitiveType: ExpressibleByBooleanLitera
     }
 }
 
+// MARK: - Boolean operators
+
+extension UniqueBooleanType where Self.PrimitiveType == Bool {
+
+    public static prefix func !(a: Self) -> Self {
+        return self.init(!a.value)
+    }
+
+    public static func && (lhs: Self, rhs: @autoclosure () throws -> Self) rethrows -> Self {
+        let result = try lhs.value && rhs().value
+        return self.init(result)
+    }
+
+    public static func && (lhs: Self, rhs: @autoclosure () throws -> Bool) rethrows -> Self {
+        let result = try lhs.value && rhs()
+        return self.init(result)
+    }
+
+    public static func || (lhs: Self, rhs: @autoclosure () throws -> Self) rethrows -> Self {
+        let result = try lhs.value || rhs().value
+        return self.init(result)
+    }
+
+    public static func || (lhs: Self, rhs: @autoclosure () throws -> Bool) rethrows -> Self {
+        let result = try lhs.value || rhs()
+        return self.init(result)
+    }
+    
+}
+
+extension Bool {
+
+    public static func && <T: UniqueBooleanType>(lhs: Bool, rhs: @autoclosure () throws -> T) rethrows -> T
+    where T.PrimitiveType == Bool {
+        let result = try lhs && rhs().value
+        return T(result)
+    }
+
+    public static func || <T: UniqueBooleanType>(lhs: Bool, rhs: @autoclosure () throws -> T) rethrows -> T
+        where T.PrimitiveType == Bool {
+        let result = try lhs || rhs().value
+        return T(result)
+    }
+
+}
+
 

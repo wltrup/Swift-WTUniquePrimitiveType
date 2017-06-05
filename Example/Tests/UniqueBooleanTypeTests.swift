@@ -27,6 +27,76 @@ class UniqueBooleanTypeTests: XCTestCase {
         XCTAssertEqual(isConnected.value, true)
     }
 
+    func testOperatorBooleanNegation() {
+        for b in [false, true] {
+            let isConnected = UserConnected(booleanLiteral: b)
+            let result = !isConnected
+            XCTAssertEqual(result.value, !b)
+        }
+    }
+
+    func testOperatorBooleanAnd1() {
+        for b1 in [false, true] {
+            for b2 in [false, true] {
+                let isConnected1 = UserConnected(booleanLiteral: b1)
+                let isConnected2 = UserConnected(booleanLiteral: b2)
+                let result = isConnected1 && isConnected2
+                XCTAssertEqual(result.value, b1 && b2)
+            }
+        }
+    }
+
+    func testOperatorBooleanAnd2() {
+        for b1 in [false, true] {
+            for b2 in [false, true] {
+                let isConnected = UserConnected(booleanLiteral: b1)
+                let result = isConnected && b2
+                XCTAssertEqual(result.value, b1 && b2)
+            }
+        }
+    }
+
+    func testOperatorBooleanAnd3() {
+        for b1 in [false, true] {
+            for b2 in [false, true] {
+                let isConnected = UserConnected(booleanLiteral: b2)
+                let result = b1 && isConnected
+                XCTAssertEqual(result.value, b1 && b2)
+            }
+        }
+    }
+
+    func testOperatorBooleanOr1() {
+        for b1 in [false, true] {
+            for b2 in [false, true] {
+                let isConnected1 = UserConnected(booleanLiteral: b1)
+                let isConnected2 = UserConnected(booleanLiteral: b2)
+                let result = isConnected1 || isConnected2
+                XCTAssertEqual(result.value, b1 || b2)
+            }
+        }
+    }
+
+    func testOperatorBooleanOr2() {
+        for b1 in [false, true] {
+            for b2 in [false, true] {
+                let isConnected = UserConnected(booleanLiteral: b1)
+                let result = isConnected || b2
+                XCTAssertEqual(result.value, b1 || b2)
+            }
+        }
+    }
+
+    func testOperatorBooleanOr3() {
+        for b1 in [false, true] {
+            for b2 in [false, true] {
+                let isConnected = UserConnected(booleanLiteral: b2)
+                let result = b1 || isConnected
+                XCTAssertEqual(result.value, b1 || b2)
+            }
+        }
+    }
+
     func testDescription() {
         let value: Bool = true
         let isConnected = UserConnected(value)
