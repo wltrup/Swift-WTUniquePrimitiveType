@@ -136,6 +136,7 @@
 			buildPhases = (
 				5634FF4335A4AFC016178F1E /* [CP] Check Pods Manifest.lock */,
 				607FACE11AFB9204008FA782 /* Sources */,
+				3B7899681EE5C1BA002B8620 /* [swiftlint] */,
 				607FACE21AFB9204008FA782 /* Frameworks */,
 				607FACE31AFB9204008FA782 /* Resources */,
 				BD2BC195AED0781844B6679C /* [CP] Embed Pods Frameworks */,
@@ -211,6 +212,20 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WTUniquePrimitiveType_Tests/Pods-WTUniquePrimitiveType_Tests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		3B7899681EE5C1BA002B8620 /* [swiftlint] */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[swiftlint]";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
 		};
 		5634FF4335A4AFC016178F1E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
