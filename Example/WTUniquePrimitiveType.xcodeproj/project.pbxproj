@@ -372,10 +372,6 @@
 			baseConfigurationReference = DBCC9FF61541E68B2B0357EC /* Pods-WTUniquePrimitiveType_Tests.debug.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = 9MP5BB6ZRE;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -393,10 +389,6 @@
 			baseConfigurationReference = 3321696612E810F97E00E122 /* Pods-WTUniquePrimitiveType_Tests.release.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = 9MP5BB6ZRE;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
 				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
