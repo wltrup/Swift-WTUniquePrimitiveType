@@ -6,6 +6,9 @@
 //  Copyright © 2017 wtruppel. All rights reserved.
 //
 
+// swiftlint:disable vertical_whitespace
+// swiftlint:disable trailing_newline
+
 import Foundation
 
 
@@ -26,3 +29,5 @@ extension UniqueBooleanType where Self.PrimitiveType: ExpressibleByBooleanLitera
         self.init(value)
     }
 }
+
+
