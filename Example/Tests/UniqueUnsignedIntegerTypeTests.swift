@@ -111,7 +111,7 @@ class UniqueUnsignedIntegerTypeTests: XCTestCase {
 
     func testNotComparable() {
         let value1: UInt32 = 100
-        let value2: UInt32 = 100
+        let value2 = value1
         let unsignedQ1 = UnsignedQ(value1)
         let unsignedQ2 = UnsignedQ(value2)
         XCTAssertFalse(unsignedQ1 < unsignedQ2)
@@ -124,3 +124,5 @@ class UniqueUnsignedIntegerTypeTests: XCTestCase {
     }
 
 }
+
+

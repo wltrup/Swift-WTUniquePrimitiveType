@@ -147,7 +147,7 @@ class UniqueIntegerTypeTests: XCTestCase {
 
     func testNotComparable() {
         let value1: Int = 100
-        let value2: Int = 100
+        let value2 = value1
         let integerQ1 = IntegerQuantity(value1)
         let integerQ2 = IntegerQuantity(value2)
         XCTAssertFalse(integerQ1 < integerQ2)
@@ -160,3 +160,5 @@ class UniqueIntegerTypeTests: XCTestCase {
     }
 
 }
+
+

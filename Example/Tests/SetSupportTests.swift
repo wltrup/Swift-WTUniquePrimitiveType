@@ -18,16 +18,16 @@ class SetSupportTests: XCTestCase {
 
     func testBoxing() {
         let set: Set<Double> = Set([100.0, 200.0, 300.0])
-        let coreTemps: Set<UserCoreTemperature> = set.boxed()
+        let floatingPointQs: Set<FloatingPointQ> = set.boxed()
         let setValues = set.map {$0}.sorted()
-        let coreTempValues = coreTemps.map {$0.value}.sorted()
-        XCTAssertEqual(coreTempValues, setValues)
+        let floatingPointQValues = floatingPointQs.map {$0.value}.sorted()
+        XCTAssertEqual(floatingPointQValues, setValues)
     }
 
     func testUnboxing() {
         let set1: Set<Double> = Set([100.0, 200.0, 300.0])
-        let coreTemps: Set<UserCoreTemperature> = set1.boxed()
-        let set2: Set<Double> = coreTemps.unboxed()
+        let floatingPointQs: Set<FloatingPointQ> = set1.boxed()
+        let set2: Set<Double> = floatingPointQs.unboxed()
         XCTAssertEqual(set2, set1)
     }
 

@@ -108,7 +108,7 @@ class UniqueSignedIntegerTypeTests: XCTestCase {
 
     func testNotComparable() {
         let value1: Int16 = -100
-        let value2: Int16 = -100
+        let value2 = value1
         let signedQ1 = SignedQ(value1)
         let signedQ2 = SignedQ(value2)
         XCTAssertFalse(signedQ1 < signedQ2)
@@ -121,3 +121,5 @@ class UniqueSignedIntegerTypeTests: XCTestCase {
     }
 
 }
+
+

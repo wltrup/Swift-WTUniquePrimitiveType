@@ -18,67 +18,69 @@ class UniqueStringTypeTests: XCTestCase {
 
     func testThatItCreatesTheCorrectInstance() {
         let value: String = "John Doe"
-        let userName = UserName(value)
-        XCTAssertEqual(userName.value, value)
+        let stringQ = StringQ(value)
+        XCTAssertEqual(stringQ.value, value)
     }
 
     func testExpressibleByStringLiteral() {
-        let userName = UserName(stringLiteral: "John Doe")
-        XCTAssertEqual(userName.value, "John Doe")
+        let stringQ = StringQ(stringLiteral: "John Doe")
+        XCTAssertEqual(stringQ.value, "John Doe")
     }
 
     func testExpressibleByExtendedGraphemeClusterLiteral() {
-        let userName = UserName(extendedGraphemeClusterLiteral: "John Doe")
-        XCTAssertEqual(userName.value, "John Doe")
+        let stringQ = StringQ(extendedGraphemeClusterLiteral: "John Doe")
+        XCTAssertEqual(stringQ.value, "John Doe")
     }
 
     func testExpressibleByUnicodeScalarLiteral() {
-        let userName = UserName(unicodeScalarLiteral: "John Doe")
-        XCTAssertEqual(userName.value, "John Doe")
+        let stringQ = StringQ(unicodeScalarLiteral: "John Doe")
+        XCTAssertEqual(stringQ.value, "John Doe")
     }
 
     func testDescription() {
         let value: String = "John Doe"
-        let userName = UserName(value)
-        XCTAssertEqual(userName.description, value.description)
+        let stringQ = StringQ(value)
+        XCTAssertEqual(stringQ.description, value.description)
     }
 
     func testEquatable() {
         let value1: String = "John Doe"
-        let userName1 = UserName(value1)
-        let value2: String = "John Doe"
-        let userName2 = UserName(value2)
-        XCTAssertTrue(userName1 == userName2)
+        let value2 = value1
+        let stringQ1 = StringQ(value1)
+        let stringQ2 = StringQ(value2)
+        XCTAssertTrue(stringQ1 == stringQ2)
     }
 
     func testNotEquatable() {
         let value1: String = "Jane Doe"
-        let userName1 = UserName(value1)
         let value2: String = "John Doe"
-        let userName2 = UserName(value2)
-        XCTAssertFalse(userName1 == userName2)
+        let stringQ1 = StringQ(value1)
+        let stringQ2 = StringQ(value2)
+        XCTAssertFalse(stringQ1 == stringQ2)
     }
 
     func testComparable() {
         let value1: String = "Jane Doe"
-        let userName1 = UserName(value1)
         let value2: String = "John Doe"
-        let userName2 = UserName(value2)
-        XCTAssertTrue(userName1 < userName2)
+        let stringQ1 = StringQ(value1)
+        let stringQ2 = StringQ(value2)
+        XCTAssertTrue(stringQ1 < stringQ2)
     }
 
     func testNotComparable() {
         let value1: String = "John Doe"
-        let userName1 = UserName(value1)
-        let value2: String = "John Doe"
-        let userName2 = UserName(value2)
-        XCTAssertFalse(userName1 < userName2)
+        let value2 = value1
+        let stringQ1 = StringQ(value1)
+        let stringQ2 = StringQ(value2)
+        XCTAssertFalse(stringQ1 < stringQ2)
     }
 
     func testHashable() {
         let value: String = "John Doe"
-        let userName = UserName(value)
-        XCTAssertEqual(userName.hashValue, value.hashValue)
+        let stringQ = StringQ(value)
+        XCTAssertEqual(stringQ.hashValue, value.hashValue)
     }
 
 }
+
+
