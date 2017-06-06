@@ -12,25 +12,25 @@
 import Foundation
 
 
-public protocol UniqueFloatingPointType: WTUniquePrimitiveType, ExpressibleByFloatLiteral,
-ExpressibleByIntegerLiteral {
+public protocol UniqueFloatingPointType: WTUniquePrimitiveType,
+ExpressibleByIntegerLiteral, ExpressibleByFloatLiteral {
 
     associatedtype PrimitiveType: BinaryFloatingPoint
 
 }
 
-// MARK: - ExpressibleByFloatLiteral
+// MARK: - ExpressibleByIntegerLiteral
 
-extension UniqueFloatingPointType where Self.PrimitiveType: ExpressibleByFloatLiteral {
-    public init(floatLiteral value: Self.PrimitiveType) {
+extension UniqueFloatingPointType {
+    public init(integerLiteral value: Self.PrimitiveType) {
         self.init(value)
     }
 }
 
-// MARK: - ExpressibleByIntegerLiteral
+// MARK: - ExpressibleByFloatLiteral
 
-extension UniqueFloatingPointType where Self.PrimitiveType: ExpressibleByIntegerLiteral {
-    public init(integerLiteral value: Self.PrimitiveType) {
+extension UniqueFloatingPointType {
+    public init(floatLiteral value: Self.PrimitiveType) {
         self.init(value)
     }
 }

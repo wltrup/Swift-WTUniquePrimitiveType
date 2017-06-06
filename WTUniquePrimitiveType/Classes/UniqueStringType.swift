@@ -12,13 +12,15 @@
 import Foundation
 
 
-public protocol UniqueStringType: WTUniquePrimitiveType, ExpressibleByStringLiteral,
-ExpressibleByExtendedGraphemeClusterLiteral, ExpressibleByUnicodeScalarLiteral {
+public protocol UniqueStringType: WTUniquePrimitiveType, ExpressibleByStringLiteral {
+
+    associatedtype PrimitiveType: ExpressibleByStringLiteral
+    
 }
 
 // MARK: - ExpressibleByStringLiteral
 
-extension UniqueStringType where Self.PrimitiveType: ExpressibleByStringLiteral {
+extension UniqueStringType {
     public init(stringLiteral value: Self.PrimitiveType) {
         self.init(value)
     }
@@ -27,7 +29,7 @@ extension UniqueStringType where Self.PrimitiveType: ExpressibleByStringLiteral 
 
 // MARK: - ExpressibleByExtendedGraphemeClusterLiteral
 
-extension UniqueStringType where Self.PrimitiveType: ExpressibleByExtendedGraphemeClusterLiteral {
+extension UniqueStringType {
     public init(extendedGraphemeClusterLiteral value: Self.PrimitiveType) {
         self.init(value)
     }
@@ -36,7 +38,7 @@ extension UniqueStringType where Self.PrimitiveType: ExpressibleByExtendedGraphe
 
 // MARK: - ExpressibleByUnicodeScalarLiteral
 
-extension UniqueStringType where Self.PrimitiveType: ExpressibleByUnicodeScalarLiteral {
+extension UniqueStringType {
     public init(unicodeScalarLiteral value: Self.PrimitiveType) {
         self.init(value)
     }

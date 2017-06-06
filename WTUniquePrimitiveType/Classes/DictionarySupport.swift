@@ -14,53 +14,19 @@ import Foundation
 
 // MARK: - Hashable
 
-//// Both key and value types are unique primitive types
-//// (hence, both Hashable and Comparable).
-//extension Dictionary where Key: WTUniquePrimitiveType, Value: WTUniquePrimitiveType {
-//
-//    public var hashValue: Int {
-//        let keys = Array(self.keys).sorted()
-//        let items = Array(self.values).sorted()
-//        return zip(keys, items)
-//            .map { (key: Key, item: Value) -> Int in
-//                return key.hashValue ^ item.hashValue
-//            }
-//            .reduce(1.hashValue) { $0 ^ $1 }
-//    }
-//
-//}
-//
-//// Only the key type is a unique primitive type,
-//// but the value type is Hashable and Comparable.
-//extension Dictionary where Key: WTUniquePrimitiveType, Value: Hashable & Comparable {
-//
-//    public var hashValue: Int {
-//        let keys = Array(self.keys).sorted()
-//        let items = Array(self.values).sorted()
-//        return zip(keys, items)
-//            .map { (key: Key, item: Value) -> Int in
-//                return key.hashValue ^ item.hashValue
-//            }
-//            .reduce(1.hashValue) { $0 ^ $1 }
-//    }
-//
-//}
-//
-//// Only the value type is a unique primitive type but the key is Comparable
-//// (the key is always Hashable).
-//extension Dictionary where Key: Comparable, Value: WTUniquePrimitiveType {
-//
-//    public var hashValue: Int {
-//        let keys = Array(self.keys).sorted()
-//        let items = Array(self.values).sorted()
-//        return zip(keys, items)
-//            .map { (key: Key, item: Value) -> Int in
-//                return key.hashValue ^ item.hashValue
-//            }
-//            .reduce(1.hashValue) { $0 ^ $1 }
-//    }
-//
-//}
+extension Dictionary where Key: Comparable, Value: Hashable & Comparable {
+
+    public var hashValue: Int {
+        let keys = Array(self.keys).sorted()
+        let items = Array(self.values).sorted()
+        return zip(keys, items)
+            .map { (key: Key, item: Value) -> Int in
+                return key.hashValue ^ item.hashValue
+            }
+            .reduce(1.hashValue) { $0 ^ $1 }
+    }
+
+}
 
 // MARK: - BOXING
 

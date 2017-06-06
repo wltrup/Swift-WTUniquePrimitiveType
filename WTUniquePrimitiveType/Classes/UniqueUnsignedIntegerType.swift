@@ -20,7 +20,7 @@ public protocol UniqueUnsignedIntegerType: WTUniquePrimitiveType, ExpressibleByI
 
 // MARK: - ExpressibleByIntegerLiteral
 
-extension UniqueUnsignedIntegerType where Self.PrimitiveType: ExpressibleByIntegerLiteral {
+extension UniqueUnsignedIntegerType {
     public init(integerLiteral value: Self.PrimitiveType) {
         self.init(value)
     }

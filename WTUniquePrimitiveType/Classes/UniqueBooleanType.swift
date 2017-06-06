@@ -12,19 +12,15 @@
 import Foundation
 
 
-public protocol UniqueBooleanType: WTUniquePrimitiveType, ExpressibleByBooleanLiteral {}
+public protocol UniqueBooleanType: WTUniquePrimitiveType, ExpressibleByBooleanLiteral {
 
-extension Bool: Comparable {
-
-    public static func <(lhs: Bool, rhs: Bool) -> Bool {
-        return !lhs && rhs
-    }
-
+    associatedtype PrimitiveType: ExpressibleByBooleanLiteral
+    
 }
 
 // MARK: - ExpressibleByBooleanLiteral
 
-extension UniqueBooleanType where Self.PrimitiveType: ExpressibleByBooleanLiteral {
+extension UniqueBooleanType {
     public init(booleanLiteral value: Self.PrimitiveType) {
         self.init(value)
     }
@@ -58,6 +54,12 @@ extension UniqueBooleanType where Self.PrimitiveType == Bool {
         return self.init(result)
     }
     
+}
+
+extension Bool: Comparable {
+    public static func <(lhs: Bool, rhs: Bool) -> Bool {
+        return !lhs && rhs
+    }
 }
 
 extension Bool {

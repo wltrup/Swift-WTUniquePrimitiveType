@@ -20,7 +20,7 @@ public protocol UniqueSignedIntegerType: WTUniquePrimitiveType, ExpressibleByInt
 
 // MARK: - ExpressibleByIntegerLiteral
 
-extension UniqueSignedIntegerType where Self.PrimitiveType: ExpressibleByIntegerLiteral {
+extension UniqueSignedIntegerType {
     public init(integerLiteral value: Self.PrimitiveType) {
         self.init(value)
     }
@@ -31,8 +31,10 @@ extension UniqueSignedIntegerType where Self.PrimitiveType: ExpressibleByInteger
 extension UniqueSignedIntegerType {
 
     public var valueAsInt: Int? {
-        guard let intValue = Int("\(value)") else { return nil }
-        return intValue
+        // Never fails in a 64-bit system but could fail in a 32-bit system.
+        // guard let intValue = Int("\(value)") else { return nil }
+        // return intValue
+        return Int("\(value)")
     }
     
 }
@@ -67,8 +69,10 @@ extension UniqueSignedIntegerType where Self.PrimitiveType == Int32 {
 extension UniqueSignedIntegerType where Self.PrimitiveType == Int64 {
 
     public init?(intValue value: Int) {
-        guard let primitiveValue = Int64.init("\(value)") else { return nil }
-        self.init(primitiveValue)
+        // Never fails while Int64 is the largest type available.
+        // guard let primitiveValue = Int64.init("\(value)") else { return nil }
+        // self.init(primitiveValue)
+        self.init(Int64(value))
     }
     
 }
