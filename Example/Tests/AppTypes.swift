@@ -17,29 +17,20 @@ import Foundation
 import WTUniquePrimitiveType
 
 
-typealias UserId = Id<User>
-typealias UserName = Name<User>
-typealias UserConnected = Connected<User>
-typealias UserCoreTemperature = CoreTemperature<User>
+typealias BooleanQ = BooleanQuantity
+typealias IntegerQ = IntegerQuantity
+typealias SignedQ = SignedQuantity
+typealias UnsignedQ = UnsignedQuantity
+typealias FloatingPointQ = FloatingPointQuantity
+typealias StringQ = StringQuantity
 
-struct User {
-    let id: UserId
-    let name: UserName
-    let isConnected: UserConnected
-    let coreTemperature: UserCoreTemperature
-}
-
-
-typealias ReactorId = Id<NuclearReactor>
-typealias ReactorName = Name<NuclearReactor>
-typealias ReactorConnected = Connected<NuclearReactor>
-typealias ReactorCoreTemperature = CoreTemperature<NuclearReactor>
-
-struct NuclearReactor {
-    let id: ReactorId
-    let name: ReactorName
-    let isConnected: ReactorConnected
-    let coreTemperature: ReactorCoreTemperature
+struct SomeType {
+    let booleanQ: BooleanQ              // backed by a Bool
+    let integerQ: IntegerQ              // backed by an Integer type, signed or unsigned
+    let signedQ: SignedQ                // backed by a signed Integer type
+    let unsignedQ: UnsignedQ            // backed by an unsigned Integer type
+    let floatingPointQ: FloatingPointQ  // backed by any floating type
+    let stringQ: StringQ                // backed by a String
 }
 
 

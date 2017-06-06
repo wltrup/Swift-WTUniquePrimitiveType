@@ -14,23 +14,27 @@
 import XCTest
 import WTUniquePrimitiveType
 
+
 class UniqueBooleanTypeTests: XCTestCase {
 
     func testThatItCreatesTheCorrectInstance() {
-        let value: Bool = true
-        let isConnected = UserConnected(value)
-        XCTAssertEqual(isConnected.value, value)
+        for b in [false, true] {
+            let booleanQ = BooleanQ(b)
+            XCTAssertEqual(booleanQ.value, b)
+        }
     }
 
     func testExpressibleByBooleanLiteral() {
-        let isConnected = UserConnected(booleanLiteral: true)
-        XCTAssertEqual(isConnected.value, true)
+        for b in [false, true] {
+            let booleanQ = BooleanQ(booleanLiteral: b)
+            XCTAssertEqual(booleanQ.value, b)
+        }
     }
 
     func testOperatorBooleanNegation() {
         for b in [false, true] {
-            let isConnected = UserConnected(booleanLiteral: b)
-            let result = !isConnected
+            let booleanQ = BooleanQ(booleanLiteral: b)
+            let result = !booleanQ
             XCTAssertEqual(result.value, !b)
         }
     }
@@ -38,9 +42,9 @@ class UniqueBooleanTypeTests: XCTestCase {
     func testOperatorBooleanAnd1() {
         for b1 in [false, true] {
             for b2 in [false, true] {
-                let isConnected1 = UserConnected(booleanLiteral: b1)
-                let isConnected2 = UserConnected(booleanLiteral: b2)
-                let result = isConnected1 && isConnected2
+                let booleanQ1 = BooleanQ(booleanLiteral: b1)
+                let booleanQ2 = BooleanQ(booleanLiteral: b2)
+                let result = booleanQ1 && booleanQ2
                 XCTAssertEqual(result.value, b1 && b2)
             }
         }
@@ -49,8 +53,8 @@ class UniqueBooleanTypeTests: XCTestCase {
     func testOperatorBooleanAnd2() {
         for b1 in [false, true] {
             for b2 in [false, true] {
-                let isConnected = UserConnected(booleanLiteral: b1)
-                let result = isConnected && b2
+                let booleanQ = BooleanQ(booleanLiteral: b1)
+                let result = booleanQ && b2
                 XCTAssertEqual(result.value, b1 && b2)
             }
         }
@@ -59,8 +63,8 @@ class UniqueBooleanTypeTests: XCTestCase {
     func testOperatorBooleanAnd3() {
         for b1 in [false, true] {
             for b2 in [false, true] {
-                let isConnected = UserConnected(booleanLiteral: b2)
-                let result = b1 && isConnected
+                let booleanQ = BooleanQ(booleanLiteral: b2)
+                let result = b1 && booleanQ
                 XCTAssertEqual(result.value, b1 && b2)
             }
         }
@@ -69,9 +73,9 @@ class UniqueBooleanTypeTests: XCTestCase {
     func testOperatorBooleanOr1() {
         for b1 in [false, true] {
             for b2 in [false, true] {
-                let isConnected1 = UserConnected(booleanLiteral: b1)
-                let isConnected2 = UserConnected(booleanLiteral: b2)
-                let result = isConnected1 || isConnected2
+                let booleanQ1 = BooleanQ(booleanLiteral: b1)
+                let booleanQ2 = BooleanQ(booleanLiteral: b2)
+                let result = booleanQ1 || booleanQ2
                 XCTAssertEqual(result.value, b1 || b2)
             }
         }
@@ -80,8 +84,8 @@ class UniqueBooleanTypeTests: XCTestCase {
     func testOperatorBooleanOr2() {
         for b1 in [false, true] {
             for b2 in [false, true] {
-                let isConnected = UserConnected(booleanLiteral: b1)
-                let result = isConnected || b2
+                let booleanQ = BooleanQ(booleanLiteral: b1)
+                let result = booleanQ || b2
                 XCTAssertEqual(result.value, b1 || b2)
             }
         }
@@ -90,55 +94,47 @@ class UniqueBooleanTypeTests: XCTestCase {
     func testOperatorBooleanOr3() {
         for b1 in [false, true] {
             for b2 in [false, true] {
-                let isConnected = UserConnected(booleanLiteral: b2)
-                let result = b1 || isConnected
+                let booleanQ = BooleanQ(booleanLiteral: b2)
+                let result = b1 || booleanQ
                 XCTAssertEqual(result.value, b1 || b2)
             }
         }
     }
 
     func testDescription() {
-        let value: Bool = true
-        let isConnected = UserConnected(value)
-        XCTAssertEqual(isConnected.description, value.description)
+        for b in [false, true] {
+            let booleanQ = BooleanQ(b)
+            XCTAssertEqual(booleanQ.description, b.description)
+        }
     }
 
     func testEquatable() {
-        let value1: Bool = true
-        let isConnected1 = UserConnected(value1)
-        let value2: Bool = true
-        let isConnected2 = UserConnected(value2)
-        XCTAssertTrue(isConnected1 == isConnected2)
-    }
-
-    func testNotEquatable() {
-        let value1: Bool = false
-        let isConnected1 = UserConnected(value1)
-        let value2: Bool = true
-        let isConnected2 = UserConnected(value2)
-        XCTAssertFalse(isConnected1 == isConnected2)
+        for b1 in [false, true] {
+            for b2 in [false, true] {
+                let booleanQ1 = BooleanQ(b1)
+                let booleanQ2 = BooleanQ(b2)
+                XCTAssertEqual(booleanQ1 == booleanQ2, b1 == b2)
+            }
+        }
     }
 
     func testComparable() {
-        let value1: Bool = false
-        let isConnected1 = UserConnected(value1)
-        let value2: Bool = true
-        let isConnected2 = UserConnected(value2)
-        XCTAssertTrue(isConnected1 < isConnected2)
-    }
-
-    func testNotComparable() {
-        let value1: Bool = true
-        let isConnected1 = UserConnected(value1)
-        let value2: Bool = true
-        let isConnected2 = UserConnected(value2)
-        XCTAssertFalse(isConnected1 < isConnected2)
+        for b1 in [false, true] {
+            for b2 in [false, true] {
+                let booleanQ1 = BooleanQ(b1)
+                let booleanQ2 = BooleanQ(b2)
+                XCTAssertTrue( (booleanQ1 < booleanQ2) == (!b1 && b2) )
+            }
+        }
     }
 
     func testHashable() {
-        let value: Bool = true
-        let isConnected = UserConnected(value)
-        XCTAssertEqual(isConnected.hashValue, value.hashValue)
+        for b in [false, true] {
+            let booleanQ = BooleanQ(b)
+            XCTAssertEqual(booleanQ.hashValue, b.hashValue)
+        }
     }
 
 }
+
+
