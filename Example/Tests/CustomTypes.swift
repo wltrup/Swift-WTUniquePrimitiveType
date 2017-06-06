@@ -18,10 +18,13 @@ import WTUniquePrimitiveType
 
 
 typealias BooleanQ = BooleanQuantity
-typealias IntegerQ = IntegerQuantity<Int8>
+typealias IntegerQ = IntegerQuantity<Int>
 typealias SignedQ = SignedQuantity<Int16>
 typealias UnsignedQ = UnsignedQuantity<UInt32>
-//typealias FloatingPointQ = FloatingPointQuantity<Double>
+// swiftlint:disable todo
+// typealias FloatingPointQ = FloatingPointQuantity<Double> // see TODO below
+// swiftlint:enable todo
+typealias FloatingPointQ = FloatingPointQuantity
 typealias StringQ = StringQuantity
 
 
@@ -61,13 +64,39 @@ struct IntegerQuantity<T: Integer>: UniqueIntegerType {
 }
 
 
-//struct FloatingPointQuantity<T: BinaryFloatingPoint>: UniqueFloatingPointType {
+// swiftlint:disable todo
+// TODO: Look into why this does not work. The compiler complains that
+// FloatingPointQuantity<T> conforms to neither ExpressibleByIntegerLiteral
+// nor ExpressibleByFloatLiteral because the inferred type T does not conform to
+// _ExpressibleByBuiltInIntegerLiteral and _ExpressibleByBuiltInFloatLiteral.
+//
+// But FloatingPointQuantity<T> does conform to both ExpressibleByIntegerLiteral
+// and ExpressibleByFloatLiteral since T declared below conforms to BinaryFloatingPoint
+// which, itself, conforms to both ExpressibleByIntegerLiteral and ExpressibleByFloatLiteral.
+//
+// That, in turn, by the protocol extensions declared in UniqueFloatingPointType, does
+// imply that FloatingPointQuantity<T>, as declared below, conforms to both
+// ExpressibleByIntegerLiteral and ExpressibleByFloatLiteral.
+//
+//struct FloatingPointQuantity<T: BinaryFloatingPoint & Hashable
+//    & CustomStringConvertible>: UniqueFloatingPointType {
 //    public typealias PrimitiveType = T
 //    public let value: T
 //    public init(_ value: T) {
 //        self.value = value
 //    }
 //}
+//
+// For now, for testing, it suffices to make PrimitiveType explicit. I'll choose Double.
+//
+// swiftlint:enable todo
+struct FloatingPointQuantity: UniqueFloatingPointType {
+    public typealias PrimitiveType = Double
+    public let value: Double
+    public init(_ value: Double) {
+        self.value = value
+    }
+}
 
 
 struct StringQuantity: UniqueStringType {
