@@ -16,6 +16,15 @@ import XCTest
 import WTUniquePrimitiveType
 
 
+struct Quantity<T: Integer>: UniqueIntegerType {
+    public typealias PrimitiveType = T
+    public let value: T
+    public init(_ value: T) {
+        self.value = value
+    }
+}
+
+
 class UniqueIntegerTypeTests: XCTestCase {
 
     func testThatItCreatesTheCorrectInstance() {
@@ -29,67 +38,77 @@ class UniqueIntegerTypeTests: XCTestCase {
         XCTAssertEqual(userId.value, 100)
     }
 
-    struct Quantity<T: _StringInitialisableInteger>: UniqueIntegerType {
-        public typealias PrimitiveType = T
-        public let value: T
-        public init(_ value: T) {
-            self.value = value
+    func testIntInit_Int8() {
+        let tval = Int8(0)
+        for (ival, pass) in [ (Int.min, false), (0, true), (Int.max, false) ] {
+            let quantity = Quantity<Int8>(intValue: ival)
+            XCTAssertEqual(quantity?.value, (pass ? tval : nil))
         }
     }
 
-    func testIntInit() {
-
-        func applyIntInitTest<T: _StringInitialisableInteger>(_ ival: Int, _ tval: T) {
-            do {
-                let quantity = try Quantity<T>(intValue: ival)
-                XCTAssertEqual(quantity.value, tval)
-            } catch {
-                guard let e = error as? UniquePrimitiveTypeError<Int, T.Type> else {
-                    XCTFail()
-                    return
-                }
-                XCTAssertTrue(e.kind == .initialization)
-                XCTAssertTrue(e.sourceValue == ival)
-            }
+    func testIntInit_Int16() {
+        let tval = Int16(0)
+        for (ival, pass) in [ (Int.min, false), (0, true), (Int.max, false) ] {
+            let quantity = Quantity<Int16>(intValue: ival)
+            XCTAssertEqual(quantity?.value, (pass ? tval : nil))
         }
+    }
 
-        applyIntInitTest(-100, Int8(-100)) // should pass
-        applyIntInitTest(-1_000, Int8(-100)) // should throw
+    func testIntInit_Int32() {
+        let tval = Int32(0)
+        for (ival, pass) in [ (Int.min, false), (0, true), (Int.max, false) ] {
+            let quantity = Quantity<Int32>(intValue: ival)
+            XCTAssertEqual(quantity?.value, (pass ? tval : nil))
+        }
+    }
 
-        applyIntInitTest(-100, Int16(-100)) // should pass
-        applyIntInitTest(-100_000, Int16(-100)) // should throw
+    func testIntInit_Int64() {
+        for (ival, tval, pass) in [ (Int.min, Int64(Int.min), true), (0, Int64(0), true),
+                                    (Int.max, Int64(Int.max), true) ] {
+                                        let quantity = Quantity<Int64>(intValue: ival)
+                                        XCTAssertEqual(quantity?.value, (pass ? tval : nil))
+        }
+    }
 
-        applyIntInitTest(-100, Int32(-100)) // should pass
-        applyIntInitTest(-100_000_000_000, Int32(-100)) // should throw
+    func testIntInit_UInt8() {
+        let tval = UInt8(0)
+        for (ival, pass) in [ (Int.min, false), (0, true), (Int.max, false) ] {
+            let quantity = Quantity<UInt8>(intValue: ival)
+            XCTAssertEqual(quantity?.value, (pass ? tval : nil))
+        }
+    }
 
-        applyIntInitTest(-100, Int64(-100)) // should pass
+    func testIntInit_UInt16() {
+        let tval = UInt16(0)
+        for (ival, pass) in [ (Int.min, false), (0, true), (Int.max, false) ] {
+            let quantity = Quantity<UInt16>(intValue: ival)
+            XCTAssertEqual(quantity?.value, (pass ? tval : nil))
+        }
+    }
 
-        applyIntInitTest(100, UInt8(100)) // should pass
-        applyIntInitTest(-100, UInt8(100)) // should throw
-        applyIntInitTest(1_000, UInt8(100)) // should throw
+    func testIntInit_UInt32() {
+        let tval = UInt32(0)
+        for (ival, pass) in [ (Int.min, false), (0, true), (Int.max, false) ] {
+            let quantity = Quantity<UInt32>(intValue: ival)
+            XCTAssertEqual(quantity?.value, (pass ? tval : nil))
+        }
+    }
 
-        applyIntInitTest(100, UInt16(100)) // should pass
-        applyIntInitTest(-100, UInt16(100)) // should throw
-        applyIntInitTest(100_000, UInt16(100)) // should throw
-
-        applyIntInitTest(100, UInt32(100)) // should pass
-        applyIntInitTest(-100, UInt32(100)) // should throw
-        applyIntInitTest(100_000_000_000, UInt32(100)) // should throw
-
-        applyIntInitTest(100, UInt64(100)) // should pass
-        applyIntInitTest(-100, UInt64(100)) // should throw
-
+    func testIntInit_UInt64() {
+        for (ival, tval, pass) in [ (Int.min, UInt64(0), false), (0, UInt64(0), true),
+                                    (Int.max, UInt64(Int.max), true) ] {
+                                        let quantity = Quantity<UInt64>(intValue: ival)
+                                        XCTAssertEqual(quantity?.value, (pass ? tval : nil))
+        }
     }
 
     func testValueAsInt() {
 
-        func applyValueAsIntTest<T: _StringInitialisableInteger>(_ tval: T) {
-            do {
-                guard let ival = Int("\(tval)") else { XCTFail(); return }
-                let quantity = Quantity<T>(tval)
-                let intValue = try quantity.valueAsInt()
-                XCTAssertEqual(intValue, ival)
-            } catch { XCTFail() }
+        func applyValueAsIntTest<T: Integer>(_ tval: T) {
+            guard let ival = Int("\(tval)") else { XCTFail(); return }
+            let quantity = Quantity<T>(tval)
+            let intValue = quantity.valueAsInt
+            XCTAssertEqual(intValue, ival)
         }
 
         applyValueAsIntTest(Int8.max)
@@ -100,17 +119,9 @@ class UniqueIntegerTypeTests: XCTestCase {
         applyValueAsIntTest(UInt16.max)
         applyValueAsIntTest(UInt32.max)
 
-        do {
-            let quantity = Quantity<UInt64>(UInt64.max)
-            let _ = try quantity.valueAsInt()
-        } catch {
-            guard let e = error as? UniquePrimitiveTypeError<UInt64, Int.Type> else {
-                XCTFail()
-                return
-            }
-            XCTAssertTrue(e.kind == .conversion)
-            XCTAssertTrue(e.sourceValue == UInt64.max)
-        }
+        let quantity = Quantity<UInt64>(UInt64.max)
+        let intValue = quantity.valueAsInt
+        XCTAssertEqual(intValue, nil)
 
     }
 

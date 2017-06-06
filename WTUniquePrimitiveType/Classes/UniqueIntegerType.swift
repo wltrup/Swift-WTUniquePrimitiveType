@@ -30,41 +30,83 @@ extension UniqueIntegerType where Self.PrimitiveType: ExpressibleByIntegerLitera
 
 extension UniqueIntegerType {
 
-    public func valueAsInt() throws -> Int {
-        guard let intValue = Int("\(value)") else {
-            throw UniquePrimitiveTypeError(kind: .conversion,
-                                           sourceValue: value,
-                                           targetType: Int.self)
-        }
+    public var valueAsInt: Int? {
+        guard let intValue = Int("\(value)") else { return nil }
         return intValue
     }
     
 }
 
+extension UniqueIntegerType where Self.PrimitiveType == Int8 {
 
-public protocol _StringInitialisableInteger: Integer {
-    init?(_ text: String, radix: Int)
-}
-extension Int8: _StringInitialisableInteger {}
-extension Int16: _StringInitialisableInteger {}
-extension Int32: _StringInitialisableInteger {}
-extension Int64: _StringInitialisableInteger {}
-extension UInt8: _StringInitialisableInteger {}
-extension UInt16: _StringInitialisableInteger {}
-extension UInt32: _StringInitialisableInteger {}
-extension UInt64: _StringInitialisableInteger {}
-
-extension UniqueIntegerType where Self.PrimitiveType: _StringInitialisableInteger {
-
-    public init(intValue value: Int) throws {
-        guard let primitiveValue = Self.PrimitiveType.init("\(value)", radix: 10) else {
-            throw UniquePrimitiveTypeError(kind: .initialization,
-                                           sourceValue: value,
-                                           targetType: Self.PrimitiveType.self)
-        }
+    public init?(intValue value: Int) {
+        guard let primitiveValue = Int8.init("\(value)") else { return nil }
         self.init(primitiveValue)
     }
+    
+}
 
+extension UniqueIntegerType where Self.PrimitiveType == Int16 {
+
+    public init?(intValue value: Int) {
+        guard let primitiveValue = Int16.init("\(value)") else { return nil }
+        self.init(primitiveValue)
+    }
+    
+}
+
+extension UniqueIntegerType where Self.PrimitiveType == Int32 {
+
+    public init?(intValue value: Int) {
+        guard let primitiveValue = Int32.init("\(value)") else { return nil }
+        self.init(primitiveValue)
+    }
+    
+}
+
+extension UniqueIntegerType where Self.PrimitiveType == Int64 {
+
+    public init?(intValue value: Int) {
+        guard let primitiveValue = Int64.init("\(value)") else { return nil }
+        self.init(primitiveValue)
+    }
+    
+}
+
+extension UniqueIntegerType where Self.PrimitiveType == UInt8 {
+
+    public init?(intValue value: Int) {
+        guard let primitiveValue = UInt8.init("\(value)") else { return nil }
+        self.init(primitiveValue)
+    }
+    
+}
+
+extension UniqueIntegerType where Self.PrimitiveType == UInt16 {
+
+    public init?(intValue value: Int) {
+        guard let primitiveValue = UInt16.init("\(value)") else { return nil }
+        self.init(primitiveValue)
+    }
+    
+}
+
+extension UniqueIntegerType where Self.PrimitiveType == UInt32 {
+
+    public init?(intValue value: Int) {
+        guard let primitiveValue = UInt32.init("\(value)") else { return nil }
+        self.init(primitiveValue)
+    }
+    
+}
+
+extension UniqueIntegerType where Self.PrimitiveType == UInt64 {
+
+    public init?(intValue value: Int) {
+        guard let primitiveValue = UInt64.init("\(value)") else { return nil }
+        self.init(primitiveValue)
+    }
+    
 }
 
 
