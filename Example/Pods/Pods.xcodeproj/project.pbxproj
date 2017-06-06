@@ -17,6 +17,7 @@
 		3BAAE9EC1EE437AB00ABA610 /* UniqueIntegerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAAE9EB1EE437AB00ABA610 /* UniqueIntegerType.swift */; };
 		3BAAE9F01EE43B1800ABA610 /* ArraySupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAAE9EF1EE43B1800ABA610 /* ArraySupport.swift */; };
 		3BAAE9F21EE43B3900ABA610 /* SetSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAAE9F11EE43B3900ABA610 /* SetSupport.swift */; };
+		3BF4BF661EE6987D000F79A2 /* UniquePrimitiveTypeError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF4BF651EE6987D000F79A2 /* UniquePrimitiveTypeError.swift */; };
 		9EBF590245B63CDA94A6AB914F3D5F01 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		A088C9280F32C83154D22B4C9EF7A91E /* WTUniquePrimitiveType-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7F98C4699179FB5C6716E769B0394D1B /* WTUniquePrimitiveType-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AA02A0DE7E420E443DD067C79F47355A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
@@ -48,6 +49,7 @@
 		3BAAE9EB1EE437AB00ABA610 /* UniqueIntegerType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UniqueIntegerType.swift; sourceTree = "<group>"; };
 		3BAAE9EF1EE43B1800ABA610 /* ArraySupport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArraySupport.swift; sourceTree = "<group>"; };
 		3BAAE9F11EE43B3900ABA610 /* SetSupport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetSupport.swift; sourceTree = "<group>"; };
+		3BF4BF651EE6987D000F79A2 /* UniquePrimitiveTypeError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UniquePrimitiveTypeError.swift; sourceTree = "<group>"; };
 		3EA540E29769D19A53AC34D0E4FB97AC /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F641AD11F7614C25635C69606298BF6 /* WTUniquePrimitiveType.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = WTUniquePrimitiveType.modulemap; sourceTree = "<group>"; };
 		50A82EFB95FC318D447106BA71A8875A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 		8240E07E3C5282F06D165E075232D1B8 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				3BF4BF651EE6987D000F79A2 /* UniquePrimitiveTypeError.swift */,
 				3BAAE9E41EE4357400ABA610 /* WTUniquePrimitiveType.swift */,
 				3BAAE9E21EE4357400ABA610 /* UniqueBooleanType.swift */,
 				3BAAE9EB1EE437AB00ABA610 /* UniqueIntegerType.swift */,
@@ -305,6 +308,7 @@
 				3BAAE9E71EE4357400ABA610 /* DictionarySupport.swift in Sources */,
 				3BAAE9E81EE4357400ABA610 /* UniqueBooleanType.swift in Sources */,
 				3BAAE9E91EE4357400ABA610 /* UniqueStringType.swift in Sources */,
+				3BF4BF661EE6987D000F79A2 /* UniquePrimitiveTypeError.swift in Sources */,
 				05E48C3DEF399397E3F88830E7A536E9 /* WTUniquePrimitiveType-dummy.m in Sources */,
 				3BAAE9F21EE43B3900ABA610 /* SetSupport.swift in Sources */,
 			);
