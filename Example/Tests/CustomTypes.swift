@@ -17,6 +17,14 @@ import Foundation
 import WTUniquePrimitiveType
 
 
+typealias BooleanQ = BooleanQuantity
+typealias IntegerQ = IntegerQuantity<Int8>
+typealias SignedQ = SignedQuantity<Int16>
+typealias UnsignedQ = UnsignedQuantity<UInt32>
+//typealias FloatingPointQ = FloatingPointQuantity<Double>
+typealias StringQ = StringQuantity
+
+
 struct BooleanQuantity: UniqueBooleanType {
     public typealias PrimitiveType = Bool
     public let value: Bool
@@ -26,40 +34,40 @@ struct BooleanQuantity: UniqueBooleanType {
 }
 
 
-struct IntegerQuantity: UniqueIntegerType {
-    public typealias PrimitiveType = Int8
-    public let value: Int8
-    public init(_ value: Int8) {
+struct SignedQuantity<T: SignedInteger>: UniqueSignedIntegerType {
+    public typealias PrimitiveType = T
+    public let value: T
+    public init(_ value: T) {
         self.value = value
     }
 }
 
 
-struct SignedQuantity: UniqueSignedIntegerType {
-    public typealias PrimitiveType = Int16
-    public let value: Int16
-    public init(_ value: Int16) {
+struct UnsignedQuantity<T: UnsignedInteger>: UniqueUnsignedIntegerType {
+    public typealias PrimitiveType = T
+    public let value: T
+    public init(_ value: T) {
         self.value = value
     }
 }
 
 
-struct UnsignedQuantity: UniqueUnsignedIntegerType {
-    public typealias PrimitiveType = UInt32
-    public let value: UInt32
-    public init(_ value: UInt32) {
+struct IntegerQuantity<T: Integer>: UniqueIntegerType {
+    public typealias PrimitiveType = T
+    public let value: T
+    public init(_ value: T) {
         self.value = value
     }
 }
 
 
-struct FloatingPointQuantity: UniqueFloatingPointType {
-    public typealias PrimitiveType = Double
-    public let value: Double
-    public init(_ value: Double) {
-        self.value = value
-    }
-}
+//struct FloatingPointQuantity<T: BinaryFloatingPoint>: UniqueFloatingPointType {
+//    public typealias PrimitiveType = T
+//    public let value: T
+//    public init(_ value: T) {
+//        self.value = value
+//    }
+//}
 
 
 struct StringQuantity: UniqueStringType {
