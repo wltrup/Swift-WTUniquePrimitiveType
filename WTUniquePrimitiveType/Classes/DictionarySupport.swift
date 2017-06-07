@@ -158,6 +158,10 @@ extension Dictionary where Value: WTUniquePrimitiveType {
 
 extension Dictionary {
 
+    public var uniqueCount: UniqueCountType<Int, Element> {
+        return UniqueCountType<Int, Element>(self.count)
+    }
+
     public var uniqueKeyCount: UniqueCountType<Int, Key> {
         return UniqueCountType<Int, Key>(self.keys.count)
     }

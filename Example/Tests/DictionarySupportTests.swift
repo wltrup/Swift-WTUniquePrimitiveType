@@ -105,6 +105,7 @@ class DictionarySupportTests: XCTestCase {
 
     func testCounting() {
         let dict: [Int: Item] = [ 10: Item(), 20: Item(), 30: Item(), 40: Item() ]
+        XCTAssertEqual(dict.uniqueCount.valueAsInt, dict.count)
         XCTAssertEqual(dict.uniqueKeyCount.valueAsInt, dict.keys.count)
         XCTAssertEqual(dict.uniqueValueCount.valueAsInt, dict.values.count)
     }
