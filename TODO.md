@@ -1,5 +1,3 @@
-- Add `UniqueIndexType`
-- Add `UniqueUnsignedIndexType`
 - Add `UniqueCountType`
 - Add documentation in the source files
 - Add support for arithmetic operations
