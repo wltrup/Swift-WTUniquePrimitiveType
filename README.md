@@ -235,7 +235,7 @@ because the compiler won't accept
     let userName = "John Doe [\(userId.description)]"
 ```
 
-since the right-hand-side is no longer a literal value.
+since the right-hand-side is no longer a literal string value.
 
 ### Support for Arrays, Sets, and Dictionaries
 
@@ -268,7 +268,7 @@ New in `version 1.0.2` is the support for returning unique count types when you 
 
 ```swift
     let array: [UserId] = ...
-    let reactors: [NuclearReactor] = ...
+    let reactors: Set<NuclearReactor> = ...
 ```
 
 If you access the computed property `count` on these, you'll get the standard `Int` values but if you want to get type-safe counts, you can access `typesafeCount` instead, as it returns a count that is typed specifically for the type of the elements stored in the collection at hand. So,
@@ -311,9 +311,9 @@ Sometimes you want to conserve memory by using an `Integer` property that isn't 
 
 In all of these cases, you often still want to be able to initialize them with `Int` values (when possible) and to refer to them as plain old `Int` instances (again, only when possible).
 
-Well, now, in `version 1.0.2`, you can (try to) initialize **any** `Integer`-backed unique primitive type with `Int` values and you can (try to) access the underlying value as an `Int`, using the computed property `valueAsInt`. Note that both the initializer and `valueAsInt` return `nil` when the conversion of the underlying `Integer` type to and from `Int` isn't possible.
+Well, now, in `version 1.0.2`, you can (try to) initialize **any** `Integer`-backed unique primitive type with `Int` values and you can (try to) access the underlying value as an `Int`, using the computed property `valueAsInt` (the `value` computed property still and always returns the underlying value, typed accordingly). Note that both the initializer and `valueAsInt` return `nil` when the conversion of the underlying `Integer` type to and from `Int` isn't possible.
 
-For example, you can't initialize an `Int8`-backed unique primitive type with an `Int` value over 128 or any unique primitive type backed by an unsigned `Integer` type with a negative `Int`. Similarly, a unique primitive type backed by `UInt64` has a wider range of values than `Int` so you can't always get an `Int` representation of the underlying value.
+For example, you can't initialize an `Int8`-backed unique primitive type with an `Int` value over 127 or any unique primitive type backed by an `UnsignedInteger` type with a negative `Int`. Similarly, a unique primitive type backed by `UInt64` has a wider range of values than `Int` so you can't always get an `Int` representation of the underlying value.
 
 ### Arithmetic operations
 
