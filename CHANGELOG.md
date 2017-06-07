@@ -12,6 +12,8 @@
 
 - Added support for `Array` subscripting using `TypesafeIntegerIndexType` instances.
 
+- Added missing support for hashing a `Dictionary`.
+
 - Streamlined and made the code more homogeneous between the various protocols and their extensions, for ease of reading and understanding.
 
 ## 1.0.1
