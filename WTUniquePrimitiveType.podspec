@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'WTUniquePrimitiveType'
-  s.version          = '1.0.1'
+  s.version          = '1.0.2'
   s.summary          = 'Lets you create distinct types based on identical primitive types.'
   s.description      = <<-DESC
     Say that your code has a user identifier that's an Int. The count of users
