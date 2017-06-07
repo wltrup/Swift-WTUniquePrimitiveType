@@ -88,3 +88,8 @@ struct StringQuantity: UniqueStringType {
 }
 
 
+struct Item {
+    // ...
+}
+
+

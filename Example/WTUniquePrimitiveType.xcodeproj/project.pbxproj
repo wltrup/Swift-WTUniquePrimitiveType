@@ -17,6 +17,7 @@
 		3BF4BF771EE7438F000F79A2 /* ArraySupportTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAAE9F31EE43FD400ABA610 /* ArraySupportTests.swift */; };
 		3BF4BF781EE74619000F79A2 /* DictionarySupportTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAAE9F41EE43FD400ABA610 /* DictionarySupportTests.swift */; };
 		3BF4BF7C1EE7774F000F79A2 /* UniqueIntegerIndexTypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF4BF7B1EE7774F000F79A2 /* UniqueIntegerIndexTypeTests.swift */; };
+		3BF4BF801EE7DBAA000F79A2 /* UniqueCountTypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF4BF7F1EE7DBAA000F79A2 /* UniqueCountTypeTests.swift */; };
 		E00B52F678542862292742DB /* Pods_WTUniquePrimitiveType_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1AB9C9C980FC3BBADDD322D /* Pods_WTUniquePrimitiveType_Tests.framework */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +34,7 @@
 		3BAAEA051EE447ED00ABA610 /* CustomTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTypes.swift; sourceTree = "<group>"; };
 		3BED29AF1EE46CFA001A7BEB /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = CHANGELOG.md; path = ../CHANGELOG.md; sourceTree = "<group>"; };
 		3BF4BF7B1EE7774F000F79A2 /* UniqueIntegerIndexTypeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UniqueIntegerIndexTypeTests.swift; sourceTree = "<group>"; };
+		3BF4BF7F1EE7DBAA000F79A2 /* UniqueCountTypeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UniqueCountTypeTests.swift; sourceTree = "<group>"; };
 		607FACE51AFB9204008FA782 /* WTUniquePrimitiveType_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WTUniquePrimitiveType_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7F1C29B23516932109640A20 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 				3BAAE9F71EE43FD400ABA610 /* UniqueFloatingPointTypeTests.swift */,
 				3BAAE9F91EE43FD400ABA610 /* UniqueStringTypeTests.swift */,
 				3BF4BF7B1EE7774F000F79A2 /* UniqueIntegerIndexTypeTests.swift */,
+				3BF4BF7F1EE7DBAA000F79A2 /* UniqueCountTypeTests.swift */,
 				3BAAE9F31EE43FD400ABA610 /* ArraySupportTests.swift */,
 				3BAAE9F51EE43FD400ABA610 /* SetSupportTests.swift */,
 				3BAAE9F41EE43FD400ABA610 /* DictionarySupportTests.swift */,
@@ -274,6 +277,7 @@
 				3BAAE9FE1EE43FD400ABA610 /* UniqueBooleanTypeTests.swift in Sources */,
 				3BF4BF741EE725BF000F79A2 /* UniqueFloatingPointTypeTests.swift in Sources */,
 				3BF4BF761EE7438C000F79A2 /* SetSupportTests.swift in Sources */,
+				3BF4BF801EE7DBAA000F79A2 /* UniqueCountTypeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
