@@ -47,8 +47,8 @@ extension Set {
     // Not added to Collection because Collections don't necessarily have Integer
     // counts. Their general count type is IndexDistance. Set specifies its
     // IndexDistance to an Int.
-    public var uniqueCount: UniqueCountType<Int, Element> {
-        return UniqueCountType<Int, Element>(self.count)
+    public var typesafeCount: TypesafeCountType<Int, Element> {
+        return TypesafeCountType<Int, Element>(self.count)
     }
     
 }

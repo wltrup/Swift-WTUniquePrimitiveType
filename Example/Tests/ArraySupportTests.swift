@@ -37,13 +37,13 @@ class ArraySupportTests: XCTestCase {
 
     func testCounting() {
         let array: [Item] = [ Item(), Item(), Item(), Item(), Item() ]
-        XCTAssertEqual(array.uniqueCount.valueAsInt, array.count)
+        XCTAssertEqual(array.typesafeCount.valueAsInt, array.count)
     }
 
     func testSubscript() {
         var array: [Int] = [ 10, 20, 30, 40, 50 ]
         let idx = 2
-        let itemIndex = UniqueIntIndexType<Int>(idx)
+        let itemIndex = TypesafeIntIndexType<Int>(idx)
         XCTAssertEqual(array[itemIndex], array[idx])
         let newValue = 100
         array[itemIndex] = newValue

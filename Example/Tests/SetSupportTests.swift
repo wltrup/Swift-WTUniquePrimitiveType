@@ -33,7 +33,7 @@ class SetSupportTests: XCTestCase {
 
     func testCounting() {
         let set: Set<Int> = [10, 20, 30, 40, 50]
-        XCTAssertEqual(set.uniqueCount.valueAsInt, set.count)
+        XCTAssertEqual(set.typesafeCount.valueAsInt, set.count)
     }
 
 }

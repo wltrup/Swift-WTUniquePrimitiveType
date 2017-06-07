@@ -1,5 +1,5 @@
 //
-//  UniqueIntegerIndexType.swift
+//  TypesafeIntegerIndexType.swift
 //  WTUniquePrimitiveTypes
 //
 //  Created by Wagner Truppel on 31/05/2017.
@@ -12,10 +12,10 @@
 import Foundation
 
 
-public typealias UniqueIntIndexType<TargetType>  = UniqueIntegerIndexType<Int,  TargetType>
-public typealias UniqueUIntIndexType<TargetType> = UniqueIntegerIndexType<UInt, TargetType>
+public typealias TypesafeIntIndexType<TargetType>  = TypesafeIntegerIndexType<Int,  TargetType>
+public typealias TypesafeUIntIndexType<TargetType> = TypesafeIntegerIndexType<UInt, TargetType>
 
-public struct UniqueIntegerIndexType<IndexType: Integer, TargetType>: UniqueIntegerType {
+public struct TypesafeIntegerIndexType<IndexType: Integer, TargetType>: UniqueIntegerType {
     public typealias PrimitiveType = IndexType
     public let value: IndexType
     public init(_ value: IndexType) {

@@ -158,16 +158,16 @@ extension Dictionary where Value: WTUniquePrimitiveType {
 
 extension Dictionary {
 
-    public var uniqueCount: UniqueCountType<Int, Element> {
-        return UniqueCountType<Int, Element>(self.count)
+    public var typesafeCount: TypesafeCountType<Int, Element> {
+        return TypesafeCountType<Int, Element>(self.count)
     }
 
-    public var uniqueKeyCount: UniqueCountType<Int, Key> {
-        return UniqueCountType<Int, Key>(self.keys.count)
+    public var typesafeKeyCount: TypesafeCountType<Int, Key> {
+        return TypesafeCountType<Int, Key>(self.keys.count)
     }
 
-    public var uniqueValueCount: UniqueCountType<Int, Value> {
-        return UniqueCountType<Int, Value>(self.values.count)
+    public var typesafeValueCount: TypesafeCountType<Int, Value> {
+        return TypesafeCountType<Int, Value>(self.values.count)
     }
 
 }

@@ -1,5 +1,5 @@
 //
-//  UniqueCountTypeTests.swift
+//  TypesafeIntegerIndexTypeTests.swift
 //  WTUniquePrimitiveTypes
 //
 //  Created by Wagner Truppel on 31/05/2017.
@@ -15,15 +15,15 @@ import XCTest
 import WTUniquePrimitiveType
 
 
-typealias CountOfItem = UniqueCountType<UInt32, Item>
+typealias IndexOfItem = TypesafeIntegerIndexType<UInt8, Item>
 
-class UniqueCountTypeTests: XCTestCase {
+class TypesafeIntegerIndexTypeTests: XCTestCase {
 
     func testThatItCreatesTheCorrectInstance1() {
-        let uint32Count: UInt32 = 100
-        let itemCount = CountOfItem(uint32Count)
-        XCTAssertEqual(itemCount.value, uint32Count)
-        XCTAssertEqual(itemCount.valueAsInt, Int(uint32Count))
+        let uint8Index: UInt8 = 100
+        let itemIndex = IndexOfItem(uint8Index)
+        XCTAssertEqual(itemIndex.value, uint8Index)
+        XCTAssertEqual(itemIndex.valueAsInt, Int(uint8Index))
     }
 
 }

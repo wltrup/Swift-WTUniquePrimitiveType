@@ -1,5 +1,5 @@
 //
-//  UniqueCountType.swift
+//  TypesafeCountType.swift
 //  WTUniquePrimitiveTypes
 //
 //  Created by Wagner Truppel on 31/05/2017.
@@ -12,10 +12,10 @@
 import Foundation
 
 
-public typealias UniqueIntCountType<TargetType>  = UniqueCountType<Int,  TargetType>
-public typealias UniqueUIntCountType<TargetType> = UniqueCountType<UInt, TargetType>
+public typealias TypesafeIntCount<TargetType>  = TypesafeCountType<Int,  TargetType>
+public typealias TypesafeUIntCount<TargetType> = TypesafeCountType<UInt, TargetType>
 
-public struct UniqueCountType<CountType: Integer, TargetType>: UniqueIntegerType {
+public struct TypesafeCountType<CountType: Integer, TargetType>: UniqueIntegerType {
     public typealias PrimitiveType = CountType
     public let value: CountType
     public init(_ value: CountType) {

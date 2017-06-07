@@ -51,8 +51,8 @@ extension Array {
     // Not added to Collection because Collections don't necessarily have Integer
     // counts. Their general count type is IndexDistance. Array specifies its
     // IndexDistance to an Int.
-    public var uniqueCount: UniqueCountType<Int, Element> {
-        return UniqueCountType<Int, Element>(self.count)
+    public var typesafeCount: TypesafeCountType<Int, Element> {
+        return TypesafeCountType<Int, Element>(self.count)
     }
 
 }
@@ -61,7 +61,7 @@ extension Array {
 
 extension Array {
 
-    public subscript(uniqueIndex: UniqueIntIndexType<Element>) -> Element {
+    public subscript(uniqueIndex: TypesafeIntIndexType<Element>) -> Element {
         get { return self[uniqueIndex.valueAsInt!] }
         set { self[uniqueIndex.valueAsInt!] = newValue }
     }
