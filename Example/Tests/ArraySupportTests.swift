@@ -35,6 +35,11 @@ class ArraySupportTests: XCTestCase {
         XCTAssertTrue(result)
     }
 
+    func testCounting() {
+        let array: [Item] = [ Item(), Item(), Item(), Item(), Item() ]
+        XCTAssertEqual(array.uniqueCount.valueAsInt, array.count)
+    }
+
     func testHashing() {
         let array = [1, 2, 3]
         let integerQs: [IntegerQ] = array.boxed()

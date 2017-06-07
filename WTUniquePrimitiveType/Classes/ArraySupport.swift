@@ -41,7 +41,20 @@ extension Array where Element: WTUniquePrimitiveType {
             return item.value
         }
     }
-    
+
+}
+
+// MARK: - COUNT
+
+extension Array {
+
+    // Not added to Collection because Collections don't necessarily have Integer
+    // counts. Their general count type is IndexDistance. Array specifies its
+    // IndexDistance to an Int.
+    public var uniqueCount: UniqueCountType<Int, Element> {
+        return UniqueCountType<Int, Element>(self.count)
+    }
+
 }
 
 

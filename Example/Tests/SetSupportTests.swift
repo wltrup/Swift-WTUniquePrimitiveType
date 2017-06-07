@@ -31,6 +31,11 @@ class SetSupportTests: XCTestCase {
         XCTAssertEqual(set2, set1)
     }
 
+    func testCounting() {
+        let set: Set<Int> = [1, 2, 3, 4, 5]
+        XCTAssertEqual(set.uniqueCount.valueAsInt, set.count)
+    }
+
 }
 
 

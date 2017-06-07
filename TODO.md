@@ -1,4 +1,2 @@
-- Add documentation in the source files
 - Add support for arithmetic operations
 - Add to Array support for subscripts of index types
-- Add to collections support for count returning CountOf

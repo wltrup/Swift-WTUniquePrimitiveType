@@ -34,7 +34,6 @@ class DictionarySupportTests: XCTestCase {
         XCTAssertEqual(dict2, dict1)
     }
 
-// XXX
     func testHashingWhenBothKeyAndValueTypesAreUniquePrimitiveTypes() {
         let dict: [Bool: Int] = [false: 1, true: 5]
         let integerQs: [BooleanQ: IntegerQ] = dict.boxed()
@@ -64,7 +63,6 @@ class DictionarySupportTests: XCTestCase {
         XCTAssertEqual(dict2, dict1)
     }
 
-    // XXX
     func testHashingWhenOnlyKeyTypesIsAUniquePrimitiveType() {
         let dict: [Bool: Int] = [false: 1, true: 5]
         let integerQs: [BooleanQ: Int] = dict.boxed()
@@ -94,7 +92,6 @@ class DictionarySupportTests: XCTestCase {
         XCTAssertEqual(dict2, dict1)
     }
 
-    // XXX
     func testHashingWhenOnlyValueTypesIsAUniquePrimitiveType() {
         let dict: [Bool: Int] = [false: 1, true: 5]
         let integerQs: [Bool: IntegerQ] = dict.boxed()
@@ -104,6 +101,12 @@ class DictionarySupportTests: XCTestCase {
             .map { $0.0.hashValue ^ $0.1.hashValue }
             .reduce(1.hashValue) { $0 ^ $1 }
         XCTAssertEqual(integerQs.hashValue, expected)
+    }
+
+    func testCounting() {
+        let dict: [Int: Item] = [ 1: Item(), 2: Item(), 3: Item(), 4: Item() ]
+        XCTAssertEqual(dict.uniqueKeyCount.valueAsInt, dict.keys.count)
+        XCTAssertEqual(dict.uniqueValueCount.valueAsInt, dict.values.count)
     }
 
 }

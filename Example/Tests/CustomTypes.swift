@@ -17,6 +17,11 @@ import Foundation
 import WTUniquePrimitiveType
 
 
+struct Item {
+    // ...
+}
+
+
 typealias BooleanQ = BooleanQuantity
 typealias IntegerQ = IntegerQuantity<Int>
 // swiftlint:disable todo
@@ -85,11 +90,6 @@ struct StringQuantity: UniqueStringType {
     public init(_ value: String) {
         self.value = value
     }
-}
-
-
-struct Item {
-    // ...
 }
 
 
