@@ -57,4 +57,15 @@ extension Array {
 
 }
 
+// MARK: - SUBSCRIPTING
+
+extension Array {
+
+    public subscript(uniqueIndex: UniqueIntIndexType<Element>) -> Element {
+        get { return self[uniqueIndex.valueAsInt!] }
+        set { self[uniqueIndex.valueAsInt!] = newValue }
+    }
+
+}
+
 

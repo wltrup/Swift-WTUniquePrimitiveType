@@ -1,2 +1,1 @@
 - Add support for arithmetic operations
-- Add to Array support for subscripts of index types
