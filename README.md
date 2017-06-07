@@ -97,14 +97,14 @@ Well, that's what this library lets you do.
 
 ## How to use
 
-There are **four** `protocol`s,
+There are **four** protocols,
 
 - `UniqueBooleanType`: for custom boolean types.
 - `UniqueIntegerType`: for custom types based off of any kind of integer.
 - `UniqueFloatingPointType`: for custom types based off of any kind of floating point type.
 - `UniqueStringType`: for custom string types.
 
-and **two** `struct`s that you need to know about:
+and **two** structs that you need to know about:
 
 - `TypesafeIntegerIndexType`: to represent indices in arrays of a given element type.
 - `TypesafeCountType`: to represent the number or count of items of any given type.
