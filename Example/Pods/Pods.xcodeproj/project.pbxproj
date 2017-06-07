@@ -17,8 +17,6 @@
 		3BAAE9EC1EE437AB00ABA610 /* UniqueIntegerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAAE9EB1EE437AB00ABA610 /* UniqueIntegerType.swift */; };
 		3BAAE9F01EE43B1800ABA610 /* ArraySupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAAE9EF1EE43B1800ABA610 /* ArraySupport.swift */; };
 		3BAAE9F21EE43B3900ABA610 /* SetSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAAE9F11EE43B3900ABA610 /* SetSupport.swift */; };
-		3BF4BF681EE6CBCC000F79A2 /* UniqueUnsignedIntegerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF4BF671EE6CBCC000F79A2 /* UniqueUnsignedIntegerType.swift */; };
-		3BF4BF6C1EE6CFDB000F79A2 /* UniqueSignedIntegerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF4BF6B1EE6CFDB000F79A2 /* UniqueSignedIntegerType.swift */; };
 		3BF4BF7A1EE77734000F79A2 /* UniqueIntegerIndexType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF4BF791EE77734000F79A2 /* UniqueIntegerIndexType.swift */; };
 		9EBF590245B63CDA94A6AB914F3D5F01 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		A088C9280F32C83154D22B4C9EF7A91E /* WTUniquePrimitiveType-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7F98C4699179FB5C6716E769B0394D1B /* WTUniquePrimitiveType-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -51,8 +49,6 @@
 		3BAAE9EB1EE437AB00ABA610 /* UniqueIntegerType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UniqueIntegerType.swift; sourceTree = "<group>"; };
 		3BAAE9EF1EE43B1800ABA610 /* ArraySupport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArraySupport.swift; sourceTree = "<group>"; };
 		3BAAE9F11EE43B3900ABA610 /* SetSupport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetSupport.swift; sourceTree = "<group>"; };
-		3BF4BF671EE6CBCC000F79A2 /* UniqueUnsignedIntegerType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UniqueUnsignedIntegerType.swift; sourceTree = "<group>"; };
-		3BF4BF6B1EE6CFDB000F79A2 /* UniqueSignedIntegerType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UniqueSignedIntegerType.swift; sourceTree = "<group>"; };
 		3BF4BF791EE77734000F79A2 /* UniqueIntegerIndexType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UniqueIntegerIndexType.swift; sourceTree = "<group>"; };
 		3EA540E29769D19A53AC34D0E4FB97AC /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F641AD11F7614C25635C69606298BF6 /* WTUniquePrimitiveType.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = WTUniquePrimitiveType.modulemap; sourceTree = "<group>"; };
@@ -151,8 +147,6 @@
 			children = (
 				3BAAE9E41EE4357400ABA610 /* WTUniquePrimitiveType.swift */,
 				3BAAE9E21EE4357400ABA610 /* UniqueBooleanType.swift */,
-				3BF4BF6B1EE6CFDB000F79A2 /* UniqueSignedIntegerType.swift */,
-				3BF4BF671EE6CBCC000F79A2 /* UniqueUnsignedIntegerType.swift */,
 				3BAAE9EB1EE437AB00ABA610 /* UniqueIntegerType.swift */,
 				3BAAE9E01EE4357400ABA610 /* UniqueFloatingPointType.swift */,
 				3BAAE9E31EE4357400ABA610 /* UniqueStringType.swift */,
@@ -308,12 +302,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				3BAAE9EC1EE437AB00ABA610 /* UniqueIntegerType.swift in Sources */,
-				3BF4BF6C1EE6CFDB000F79A2 /* UniqueSignedIntegerType.swift in Sources */,
 				3BAAE9E61EE4357400ABA610 /* UniqueFloatingPointType.swift in Sources */,
 				3BF4BF7A1EE77734000F79A2 /* UniqueIntegerIndexType.swift in Sources */,
 				3BAAE9F01EE43B1800ABA610 /* ArraySupport.swift in Sources */,
 				3BAAE9EA1EE4357400ABA610 /* WTUniquePrimitiveType.swift in Sources */,
-				3BF4BF681EE6CBCC000F79A2 /* UniqueUnsignedIntegerType.swift in Sources */,
 				3BAAE9E71EE4357400ABA610 /* DictionarySupport.swift in Sources */,
 				3BAAE9E81EE4357400ABA610 /* UniqueBooleanType.swift in Sources */,
 				3BAAE9E91EE4357400ABA610 /* UniqueStringType.swift in Sources */,

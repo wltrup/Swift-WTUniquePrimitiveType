@@ -19,8 +19,6 @@ import WTUniquePrimitiveType
 
 typealias BooleanQ = BooleanQuantity
 typealias IntegerQ = IntegerQuantity<Int>
-typealias SignedQ = SignedQuantity<Int16>
-typealias UnsignedQ = UnsignedQuantity<UInt32>
 // swiftlint:disable todo
 // typealias FloatingPointQ = FloatingPointQuantity<Double> // see TODO below
 // swiftlint:enable todo
@@ -32,24 +30,6 @@ struct BooleanQuantity: UniqueBooleanType {
     public typealias PrimitiveType = Bool
     public let value: Bool
     public init(_ value: Bool) {
-        self.value = value
-    }
-}
-
-
-struct SignedQuantity<T: SignedInteger>: UniqueSignedIntegerType {
-    public typealias PrimitiveType = T
-    public let value: T
-    public init(_ value: T) {
-        self.value = value
-    }
-}
-
-
-struct UnsignedQuantity<T: UnsignedInteger>: UniqueUnsignedIntegerType {
-    public typealias PrimitiveType = T
-    public let value: T
-    public init(_ value: T) {
         self.value = value
     }
 }
