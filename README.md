@@ -7,6 +7,9 @@
 [![Xcode](https://img.shields.io/badge/Xcode-8.3-blue.svg)](https://developer.apple.com/xcode)
 [![License](https://img.shields.io/cocoapods/l/WTUniquePrimitiveType.svg?style=flat)](http://cocoapods.org/pods/WTUniquePrimitiveType)
 
+## IMPORTANT
+2019.11.30: This project has been **deprecated**. A much better approach - [Tagged](https://github.com/pointfreeco/swift-tagged) - was devised by Brandon Williams and Stephen Celis, the folks at [pointfree](https://www.pointfree.co). You can watch the episode on it [here](https://www.pointfree.co/episodes/ep12-tagged).
+
 ## New in 1.0.2
 
 - Added `TypesafeCountType`.
